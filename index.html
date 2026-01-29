@@ -1,1188 +1,229 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Автомобильные усилители Black Tiger Audio STORM и GALE — честный автозвук, 4 и 2 канала</title>
-  <meta name="description"
-        content="Автомобильные усилители Black Tiger Audio STORM (4-канальный) и GALE (2-канальный). Честный RMS, стабильная работа на высокой громкости, защита от перегрузки и короткого замыкания. Для фронта, сабвуфера и повседневной громкой системы." />
-  <meta name="robots" content="index,follow" />
-
-  <style>
-    :root {
-      --bg-main: #050816;
-      --bg-card: #111827;
-      --bg-soft: #020617;
-      --accent: #f97316;
-      --accent-soft: #fed7aa;
-      --text-main: #e5e7eb;
-      --text-muted: #9ca3af;
-      --border-subtle: #1f2937;
-      --radius-lg: 18px;
-      --shadow-soft: 0 24px 60px rgba(0, 0, 0, 0.6);
-      --wb: #cb11ab;
-      --wb-hover: #a40e89;
-      --ozon: #005bff;
-      --ozon-hover: #0042b8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-      background: radial-gradient(circle at top left, #0b1220 0, #020617 45%, #000 100%);
-      color: var(--text-main);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page {
-      min-height: 100vh;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 0 16px 80px;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      backdrop-filter: blur(18px);
-      background: linear-gradient(to bottom, rgba(3, 7, 18, 0.92), rgba(3, 7, 18, 0.4));
-      border-bottom: 1px solid rgba(15, 23, 42, 0.9);
-    }
-
-    .header-inner {
-      max-width: 1160px;
-      margin: 0 auto;
-      padding: 14px 16px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 15px;
-    }
-
-    .logo-mark {
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #fed7aa, #f97316);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 15px;
-      color: #111827;
-      box-shadow: 0 0 0 2px rgba(15, 23, 42, 0.7);
-    }
-
-    .logo-text-main {
-      font-weight: 600;
-      letter-spacing: 0.03em;
-    }
-
-    .logo-text-sub {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    nav a {
-      position: relative;
-      padding-bottom: 3px;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(to right, var(--accent), #22c55e);
-      transition: width 0.18s ease-out;
-    }
-
-    nav a:hover::after {
-      width: 100%;
-    }
-
-    /* HERO */
-
-    .hero {
-      padding: 40px 0 40px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-      gap: 32px;
-      align-items: stretch;
-    }
-
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--accent-soft);
-      background: rgba(15, 23, 42, 0.8);
-      border-radius: 999px;
-      padding: 4px 10px 4px 4px;
-      border: 1px solid rgba(248, 250, 252, 0.06);
-      margin-bottom: 10px;
-    }
-
-    .hero-kicker-dot {
-      width: 18px;
-      height: 18px;
-      border-radius: 999px;
-      background: radial-gradient(circle, var(--accent), #b45309);
-      box-shadow: 0 0 0 2px rgba(248, 250, 252, 0.04);
-    }
-
-    .hero h1 {
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .hero-sub {
-      font-size: 14px;
-      color: var(--text-muted);
-      max-width: 480px;
-      margin-bottom: 18px;
-    }
-
-    .hero-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 18px;
-    }
-
-    .badge {
-      font-size: 11px;
-      padding: 5px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: #e5e7eb;
-      background: radial-gradient(circle at 0 0, rgba(148, 163, 184, 0.16), rgba(15, 23, 42, 0.9));
-    }
-
-    .badge-ghost {
-      background: transparent;
-      color: var(--text-muted);
-      border-style: dashed;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 14px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 9px 16px;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 13px;
-      font-weight: 500;
-      cursor: pointer;
-      background: #111827;
-      color: var(--text-main);
-      transition: background 0.15s ease-out, transform 0.1s ease-out, box-shadow 0.15s ease-out;
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.6);
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #fbbf24);
-      color: #0f172a;
-      box-shadow: 0 14px 40px rgba(248, 147, 29, 0.65);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border-color: rgba(148, 163, 184, 0.6);
-      box-shadow: none;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.8);
-    }
-
-    .btn-outline:hover {
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.05);
-    }
-
-    .btn-ozon {
-      background: var(--ozon);
-      color: #ffffff;
-      box-shadow: 0 14px 40px rgba(0, 91, 255, 0.55);
-    }
-
-    .btn-ozon:hover {
-      background: var(--ozon-hover);
-      filter: none;
-    }
-
-    .btn-wb {
-      background: var(--wb);
-      color: #ffffff;
-      box-shadow: 0 14px 40px rgba(203, 17, 171, 0.55);
-    }
-
-    .btn-wb:hover {
-      background: var(--wb-hover);
-      filter: none;
-    }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-note span {
-      color: var(--accent-soft);
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, #111827, #020617);
-      border-radius: 24px;
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(148, 163, 184, 0.3);
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .hero-card-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
-
-    .hero-chip {
-      font-size: 10px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: var(--text-main);
-    }
-
-    .hero-card h2 {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .hero-specs {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
-
-    .hero-image-wrap {
-      margin-top: 6px;
-      border-radius: 18px;
-      overflow: hidden;
-      background: radial-gradient(circle at top, #020617, #000);
-      padding: 10px 16px 6px;
-    }
-
-    .hero-image-wrap img {
-      margin: 0 auto;
-    }
-
-    /* SECTION TITLE */
-
-    .section {
-      margin-top: 40px;
-    }
-
-    .section-header {
-      margin-bottom: 14px;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent-soft);
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .section-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-      max-width: 620px;
-    }
-
-    /* CARDS GRID */
-
-    .amp-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .amp-card {
-      background: linear-gradient(145deg, #020617, #020617);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(30, 64, 175, 0.6);
-      padding: 16px 16px 14px;
-      box-shadow: var(--shadow-soft);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .amp-card:nth-child(1) {
-      border-color: rgba(52, 211, 153, 0.7);
-    }
-
-    .amp-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 12px;
-      font-size: 12px;
-    }
-
-    .amp-card-title {
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    .amp-card-sub {
-      font-size: 12px;
-      color: var(--accent-soft);
-    }
-
-    .amp-tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .amp-tag {
-      font-size: 10px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(148, 163, 184, 0.4);
-      color: #e5e7eb;
-    }
-
-    .amp-img-wrap {
-      margin-top: 4px;
-      border-radius: 16px;
-      background: radial-gradient(circle at top, #020617, #000);
-      padding: 14px 18px 10px;
-    }
-
-    .amp-desc {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-
-    .amp-specs {
-      margin-top: 8px;
-      font-size: 12px;
-      color: var(--text-main);
-    }
-
-    .amp-specs dt {
-      float: left;
-      clear: left;
-      width: 130px;
-      color: var(--text-muted);
-    }
-
-    .amp-specs dd {
-      margin-left: 140px;
-    }
-
-    .amp-specs-row {
-      margin-bottom: 3px;
-    }
-
-    .amp-actions {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    /* TABLE COMPARE */
-
-    .table-wrap {
-      margin-top: 12px;
-      border-radius: var(--radius-lg);
-      border: 1px solid var(--border-subtle);
-      overflow: hidden;
-      background: #020617;
-      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.7);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 12px;
-    }
-
-    thead {
-      background: #020617;
-    }
-
-    th,
-    td {
-      padding: 9px 12px;
-      border-bottom: 1px solid rgba(30, 64, 175, 0.5);
-    }
-
-    th {
-      text-align: left;
-      font-weight: 500;
-      color: #cbd5f5;
-      background: #020617;
-    }
-
-    tbody tr:nth-child(even) {
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    tbody tr:nth-child(odd) {
-      background: rgba(3, 7, 18, 0.9);
-    }
-
-    /* BENEFITS */
-
-    .benefits-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 12px;
-    }
-
-    .benefit-card {
-      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.03), rgba(15, 23, 42, 0.95));
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      padding: 12px 12px 11px;
-      font-size: 12px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    .benefit-title {
-      font-weight: 500;
-      margin-bottom: 4px;
-      color: #e5e7eb;
-    }
-
-    .benefit-text {
-      color: var(--text-muted);
-    }
-
-    /* WHO */
-
-    .who-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 12px;
-    }
-
-    .who-card {
-      background: linear-gradient(145deg, #020617, #020617);
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(55, 65, 81, 0.9);
-      padding: 12px;
-      font-size: 12px;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
-    }
-
-    .who-title {
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .who-list {
-      padding-left: 16px;
-      color: var(--text-muted);
-    }
-
-    .who-list li {
-      margin-bottom: 3px;
-    }
-
-    /* FAQ */
-
-    .faq-grid {
-      margin-top: 12px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .faq-item {
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(31, 41, 55, 0.9);
-      background: rgba(15, 23, 42, 0.96);
-      padding: 11px 12px;
-      font-size: 12px;
-    }
-
-    .faq-q {
-      font-weight: 500;
-      margin-bottom: 4px;
-    }
-
-    .faq-a {
-      color: var(--text-muted);
-    }
-
-    /* FOOTER CTA */
-
-    .footer-cta {
-      margin-top: 36px;
-      border-radius: 24px;
-      padding: 18px 16px;
-      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.05), rgba(15, 23, 42, 0.98));
-      border: 1px solid rgba(30, 64, 175, 0.7);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      font-size: 13px;
-    }
-
-    .footer-cta strong {
-      font-size: 15px;
-    }
-
-    .footer-cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    footer {
-      padding: 18px 16px 30px;
-      font-size: 11px;
-      color: var(--text-muted);
-      text-align: center;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 960px) {
-      .hero-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-card {
-        order: -1;
-      }
-
-      .amp-grid,
-      .benefits-grid,
-      .who-grid,
-      .faq-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      nav {
-        display: none;
-      }
-
-      .container {
-        padding-bottom: 60px;
-      }
-
-      .hero {
-        padding-top: 28px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 24px;
-      }
-
-      .section-title {
-        font-size: 18px;
-      }
-
-      .footer-cta {
-        align-items: flex-start;
-      }
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>BLACK TIGER AUDIO — Investor</title>
+  <meta name="description" content="Инвест-предложение Black Tiger Audio: честный автозвук, подтвержденные продажи, фокус на оборотке и масштабировании.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="page">
-  <header>
-    <div class="header-inner">
-      <div class="logo">
-        <div class="logo-mark">BT</div>
-        <div>
-          <div class="logo-text-main">Black Tiger Audio</div>
-          <div class="logo-text-sub">Автомобильные усилители без «нарисованных» киловатт</div>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true">
+          <!-- Fox mark (Sunfox). Stroke uses currentColor for easy recolor. -->
+          <svg class="brand__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+            <path d="M32 6L48 16L58 10V30C58 44 47 56 32 58C17 56 6 44 6 30V10L16 16L32 6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+            <path d="M22 30C25 26 28.5 24 32 24C35.5 24 39 26 42 30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <path d="M26 41C28.5 44.5 30.5 46 32 46C33.5 46 35.5 44.5 38 41" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="25" cy="33" r="2" fill="currentColor"/>
+            <circle cx="39" cy="33" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="brand__text">
+          <div class="brand__name">BLACK TIGER AUDIO</div>
+          <div class="brand__sub">Investor snapshot</div>
         </div>
       </div>
-      <nav>
-        <a href="#choose">Какой усилитель выбрать</a>
-        <a href="#compare">Сравнение</a>
-        <a href="#benefits">Преимущества</a>
-        <a href="#fit">Кому подойдёт</a>
-        <a href="#faq">FAQ</a>
-        <a href="#buy">Где купить</a>
+
+      <nav class="nav">
+        <a href="#traction">Traction</a>
+        <a href="#strategy">Стратегия</a>
+        <a href="#economics">Экономика</a>
+        <a href="#deal">Условия</a>
+        <a href="#contact">Контакт</a>
       </nav>
+
+      <div class="topbar__cta">
+        <a class="btn btn--ghost" id="deckLink" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
+        <a class="btn btn--primary" id="tgLink" href="#" target="_blank" rel="noopener">Telegram</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <div class="container">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <div class="pill" id="updatedPill">Обновлено: —</div>
+          <h1 id="heroTitle">BLACK TIGER AUDIO</h1>
+          <p class="hero__tagline" id="heroTagline"></p>
 
-      <!-- HERO -->
-      <section class="hero" id="top">
-        <div class="hero-grid">
-          <div>
-            <div class="hero-kicker">
-              <span class="hero-kicker-dot"></span>
-              Усилители, которые реально тянут систему
-            </div>
-            <h1>Соберите честный автозвук<br />с Black Tiger Audio</h1>
-            <p class="hero-sub">
-              Два усилителя под любые задачи: повседневный драйв, акцент на сабвуфере или мощный фронт.
-              Здесь честные RMS-мощности и защита, а не лишние маркетинговые нули.
-            </p>
+          <div class="hero__grid" id="kpiGrid"></div>
 
-            <div class="hero-badges">
-              <span class="badge">Честный RMS без накруток</span>
-              <span class="badge">Стабильная работа на высокой громкости</span>
-              <span class="badge badge-ghost">Защита от перегрузки и КЗ</span>
-            </div>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#choose">Подобрать усилитель</a>
-              <a class="btn btn-outline" href="#compare">Сравнить GALE и STORM</a>
-            </div>
-
-            <p class="hero-note">
-              <span>Важно:</span> мы не занимаемся маркетплейс-арифметикой. Сначала покупатель собирает систему,
-              а уже потом смотрит на цифры.
-            </p>
+          <div class="hero__note">
+            <div class="hero__note-title">Позиционирование</div>
+            <ul class="clean" id="positioningList"></ul>
           </div>
 
-          <aside class="hero-card">
-            <div class="hero-card-top">
-              <div>
-                <div style="font-size:12px; text-transform:uppercase; letter-spacing:0.08em; color:#9ca3af;">
-                  STORM 5800W • 4-канальный
-                </div>
-                <h2>Для фронта + сабвуфера в одном корпусе</h2>
-              </div>
-              <div style="font-size:11px; color:#f97316;">Маркетинговая мощность: 5800 Вт</div>
-            </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" id="deckLink2" href="deck.pdf" target="_blank" rel="noopener">Скачать deck</a>
+            <a class="btn btn--ghost" id="tgReviewsLink" href="#" target="_blank" rel="noopener">Отзывы (TG)</a>
+            <a class="btn btn--ghost" id="emailLink" href="#">Email</a>
+          </div>
 
-            <div class="hero-chip-row">
-              <span class="hero-chip">4 × 75 Вт RMS (4 Ом)</span>
-              <span class="hero-chip">2 × 180 Вт в мосту (4 Ом)</span>
-              <span class="hero-chip">AB, аналоговый</span>
-            </div>
-
-            <p class="hero-specs">
-              Компактный 4-канальный усилитель, которого хватает на фронт (2 канала)
-              и сабвуфер в мосту. Можно собрать как спокойную повседневную систему,
-              так и громкий вариант для соревнований.
-            </p>
-
-            <div class="hero-image-wrap">
-              <img src="storm-front.jpg"
-                   alt="4-канальный автомобильный усилитель Black Tiger Audio STORM 5800 Вт, вид сверху" />
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- CHOOSE AMP -->
-      <section class="section" id="choose">
-        <div class="section-header">
-          <div class="section-kicker">Выбор модели</div>
-          <h2 class="section-title">Какой усилитель выбрать — GALE или STORM?</h2>
-          <p class="section-sub">
-            GALE — когда нужен честный саб и поддержка фронта. STORM — когда хочется, чтобы играло всё:
-            чистый фронт и плотный бас. Ниже — кратко по задачам и характеристикам.
+          <p class="disclaimer">
+            Информация не является публичной офертой. Данные по маркетплейсам предоставляются по запросу (dataroom).
           </p>
         </div>
 
-        <div class="amp-grid">
-          <!-- GALE -->
-          <article class="amp-card">
-            <div class="amp-card-header">
-              <div>
-                <div class="amp-card-sub">GALE 3800W • повседневный драйв</div>
-                <div class="amp-card-title">GALE — 2-канальный усилитель</div>
-              </div>
-              <div style="font-size:11px; color:#f97316;">Маркетинговая мощность: 3800 Вт</div>
-            </div>
-
-            <div class="amp-tag-row">
-              <span class="amp-tag">2 × 80 Вт RMS (4 Ом)</span>
-              <span class="amp-tag">2 × 160 Вт (2 Ом)</span>
-              <span class="amp-tag">1 × 160 Вт в мосту (4 Ом)</span>
-              <span class="amp-tag">Класс AB</span>
-              <span class="amp-tag">Для сабвуфера или фронта</span>
-            </div>
-
-            <div class="amp-img-wrap">
-              <img src="gale-front.jpg"
-                   alt="2-канальный автомобильный усилитель Black Tiger Audio GALE 3800 Вт, вид сверху" />
-            </div>
-
-            <p class="amp-desc">
-              GALE — рабочая лошадка. Можно качнуть сабвуфер, можно поставить на фронт,
-              можно использовать в мостовом режиме. Хороший вариант, когда нужна честная
-              мощность без переплаты за лишние каналы.
+        <div class="hero__right">
+          <div class="card card--glow card--brand">
+            <img class="card__watermark" src="assets/tiger_logo.png" alt="Black Tiger logo" loading="lazy">
+            <div class="card__title">Ключевая мысль</div>
+            <p class="card__text">
+              Спрос и качество подтверждены отзывами. Узкое место сейчас — наличие и оборотный капитал.
+              Деньги в проекте превращаются в товар → продажи → масштаб.
             </p>
-
-            <dl class="amp-specs">
-              <div class="amp-specs-row">
-                <dt>RMS 4 Ω (стерео)</dt>
-                <dd>2 × 80 Вт</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>RMS 2 Ω (стерео)</dt>
-                <dd>2 × 160 Вт</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>RMS 4 Ω (мост)</dt>
-                <dd>1 × 160 Вт</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>Диапазон частот</dt>
-                <dd>20 Гц – 20 кГц</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>THD</dt>
-                <dd>&lt; 0,02 %</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>Нагрузка</dt>
-                <dd>4–8 Ω</dd>
-              </div>
-            </dl>
-
-            <div class="amp-actions">
-              <a class="btn btn-ozon"
-                 href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-2-3800-vt-3210383821/?oos_search=false&prev_collection=163371609"
-                 target="_blank" rel="noopener noreferrer">
-                Купить GALE на Ozon
-              </a>
-              <a class="btn btn-wb"
-                 href="https://www.wildberries.ru/catalog/689777164/detail.aspx?targetUrl=GP"
-                 target="_blank" rel="noopener noreferrer">
-                Купить GALE на Wildberries
-              </a>
+            <div class="card__divider"></div>
+            <div class="mini">
+              <div class="mini__label">Миссия</div>
+              <div class="mini__value" id="missionText"></div>
             </div>
-          </article>
+          </div>
 
-          <!-- STORM -->
-          <article class="amp-card">
-            <div class="amp-card-header">
-              <div>
-                <div class="amp-card-sub">STORM 5800W • мощная система</div>
-                <div class="amp-card-title">STORM — 4-канальный усилитель</div>
-              </div>
-              <div style="font-size:11px; color:#f97316;">Маркетинговая мощность: 5800 Вт</div>
+          <div class="media">
+            <img src="assets/wb_ratings.png" alt="WB ratings screenshot" loading="lazy">
+            <div class="media__caption">WB: рейтинги и отзывы по двум SKU</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="traction">
+      <div class="container">
+        <div class="section__head">
+          <h2>Traction</h2>
+          <p>Факты вместо обещаний.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="card__title">Ozon: динамика доставок</div>
+            <img class="img" src="assets/ozon_cum_delivered.png" alt="Ozon cumulative delivered chart" loading="lazy">
+            <div class="muted">Источник: выгрузка заказов + отчёт начислений (период 01.12.2025–29.01.2026).</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Пример отзыва (WB)</div>
+            <img class="img" src="assets/wb_review.png" alt="WB review screenshot" loading="lazy">
+            <div class="muted">Важно: мы отвечаем на отзывы и помогаем с подключением/настройкой.</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Живой отзыв (Telegram)</div>
+            <img class="img" src="assets/tg_review.png" alt="Telegram review screenshot" loading="lazy">
+            <div class="muted">Отзывы и вопросы по установке — в Telegram. Всё живое, без накруток.</div>
+            <div style="margin-top:12px">
+              <a class="btn btn--primary" id="tgReviewsLink2" href="#" target="_blank" rel="noopener">Открыть канал отзывов</a>
             </div>
-
-            <div class="amp-tag-row">
-              <span class="amp-tag">4 × 75 Вт RMS (4 Ом)</span>
-              <span class="amp-tag">4 × 90 Вт (2 Ом)</span>
-              <span class="amp-tag">2 × 180 Вт в мосту (4 Ом)</span>
-              <span class="amp-tag">Фронт + сабвуфер</span>
-              <span class="amp-tag">Класс AB, аналоговый</span>
-            </div>
-
-            <div class="amp-img-wrap">
-              <img src="storm-front.jpg"
-                   alt="4-канальный автомобильный усилитель Black Tiger Audio STORM 5800 Вт, корпус из чёрного алюминия" />
-            </div>
-
-            <p class="amp-desc">
-              STORM — когда хочется, чтобы играла вся система: чистый фронт и плотный бас.
-              Компактный 4-канальник, которого хватает на фронт (2 канала) и сабвуфер в мосту.
-              Можно собрать как спокойный повседневный вариант, так и громкую систему.
-            </p>
-
-            <dl class="amp-specs">
-              <div class="amp-specs-row">
-                <dt>RMS 4 Ω (стерео)</dt>
-                <dd>4 × 75 Вт</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>RMS 2 Ω (стерео)</dt>
-                <dd>4 × 90 Вт</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>RMS 4 Ω (мост)</dt>
-                <dd>2 × 180 Вт</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>Диапазон частот</dt>
-                <dd>10 Гц – 45 кГц</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>Класс</dt>
-                <dd>AB, аналоговый</dd>
-              </div>
-              <div class="amp-specs-row">
-                <dt>Нагрузка</dt>
-                <dd>4–8 Ω</dd>
-              </div>
-            </dl>
-
-            <div class="amp-actions">
-              <a class="btn btn-ozon"
-                 href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-4-5800-vt-3139066863/?_bctx=CAkQ2bTzTQ&at=ywtA5JNy1FKxLZQzfEzVMrAURBp6X3hmRKkZwsMnkqL"
-                 target="_blank" rel="noopener noreferrer">
-                Купить STORM на Ozon
-              </a>
-              <a class="btn btn-wb"
-                 href="https://www.wildberries.ru/catalog/636038071/detail.aspx"
-                 target="_blank" rel="noopener noreferrer">
-                Купить STORM на Wildberries
-              </a>
-            </div>
-          </article>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- COMPARE -->
-      <section class="section" id="compare">
-        <div class="section-header">
-          <div class="section-kicker">Сравнение моделей</div>
-          <h2 class="section-title">Чем отличаются GALE и STORM</h2>
-          <p class="section-sub">
-            Оба усилителя сделаны с расчётом на честный RMS и стабильную работу.
-            Главные отличия — количество каналов и задачи системы.
-          </p>
+    <section class="section" id="strategy">
+      <div class="container">
+        <div class="section__head">
+          <h2>Стратегия</h2>
+          <p id="strategyHeadline">—</p>
         </div>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Параметр</th>
-                <th>STORM 5800W — 4-канальный</th>
-                <th>GALE 3800W — 2-канальный</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Основная задача</td>
-                <td>Фронт + сабвуфер в одном корпусе, возможность 4-канального фронта</td>
-                <td>Сабвуфер или фронт, компактный усилитель под повседнев</td>
-              </tr>
-              <tr>
-                <td>Каналы</td>
-                <td>4 канала, 2 моста</td>
-                <td>2 канала, 1 мост</td>
-              </tr>
-              <tr>
-                <td>RMS 4 Ω</td>
-                <td>4 × 75 Вт</td>
-                <td>2 × 80 Вт</td>
-              </tr>
-              <tr>
-                <td>RMS 2 Ω</td>
-                <td>4 × 90 Вт</td>
-                <td>2 × 160 Вт</td>
-              </tr>
-              <tr>
-                <td>RMS мост 4 Ω</td>
-                <td>2 × 180 Вт</td>
-                <td>1 × 160 Вт</td>
-              </tr>
-              <tr>
-                <td>Класс усилителя</td>
-                <td>AB, аналоговый</td>
-                <td>AB</td>
-              </tr>
-              <tr>
-                <td>Кому подойдёт</td>
-                <td>Тем, кто хочет, чтобы громко и чисто играла вся система</td>
-                <td>Тем, кому нужен честный усилитель для саба или простого фронта</td>
-              </tr>
-              <tr>
-                <td>Маркетинговая мощность</td>
-                <td>5800 Вт</td>
-                <td>3800 Вт</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card__title">Куда идём</div>
+            <ul class="clean" id="strategyPoints"></ul>
+          </div>
 
-      <!-- BENEFITS -->
-      <section class="section" id="benefits">
-        <div class="section-header">
-          <div class="section-kicker">Почему Black Tiger Audio</div>
-          <h2 class="section-title">Что вы получаете с нашими усилителями</h2>
-          <p class="section-sub">
-            Мы не рисуем «до 10000 Вт» на корпусе. Усилители проектировались под реальные
-            условия эксплуатации и жизнь в машине, а не под красивые цифры в карточке.
-          </p>
+          <div class="card">
+            <div class="card__title">Почему выиграем</div>
+            <ul class="clean" id="strategyMoat"></ul>
+          </div>
+
+          <div class="card">
+            <div class="card__title" id="teamTitle">Опыт команды</div>
+            <ul class="clean" id="teamBullets"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="economics">
+      <div class="container">
+        <div class="section__head">
+          <h2>Юнит‑экономика</h2>
+          <p>Средние значения по факту (Ozon). Для масштабирования — ключевой экран.</p>
         </div>
 
-        <div class="benefits-grid">
-          <article class="benefit-card">
-            <h3 class="benefit-title">Честная мощность</h3>
-            <p class="benefit-text">
-              Мощностные характеристики привязаны к реальным тестам, а не к маркетинговым
-              фантазиям. Усилитель реально выдаёт заявленный RMS.
-            </p>
-          </article>
+        <div class="products" id="productsGrid"></div>
 
-          <article class="benefit-card">
-            <h3 class="benefit-title">Стабильность питания</h3>
-            <p class="benefit-text">
-              Полноразмерная плата во всю длину корпуса, серьёзный трансформатор и
-              конденсаторы высокой ёмкости. Усилитель не «плывёт» от первой же просадки.
-            </p>
-          </article>
-
-          <article class="benefit-card">
-            <h3 class="benefit-title">Полный набор защит</h3>
-            <p class="benefit-text">
-              Защита от перегрузки, короткого замыкания и перегрева —
-              усилитель уходит в защиту, а не в сервис.
-            </p>
-          </article>
-
-          <article class="benefit-card">
-            <h3 class="benefit-title">Комфортный монтаж</h3>
-            <p class="benefit-text">
-              Терминалы питания и акустики размещены логично, не нужно изобретать
-              сложные изгибы проводов и бороться с перегревом клемм.
-            </p>
-          </article>
-
-          <article class="benefit-card">
-            <h3 class="benefit-title">Поддержка и гарантия</h3>
-            <p class="benefit-text">
-              Мы помогаем подобрать схему подключения под вашу задачу.
-              Гарантия 12 месяцев, сервис через маркетплейс или напрямую.
-            </p>
-          </article>
-
-          <article class="benefit-card">
-            <h3 class="benefit-title">Запас на будущее</h3>
-            <p class="benefit-text">
-              Начать можно с простой связки «фронт + саб», а потом добавить
-              более серьёзную акустику, не меняя усилитель.
-            </p>
-          </article>
+        <div class="note">
+          <div class="note__title">Почему маржа растёт</div>
+          <div class="note__text">
+            Вы уже подняли цены и сократили международную логистику. Это увеличивает вклад на единицу
+            и позволяет масштабировать рекламу, не ломая экономику.
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- WHO FIT -->
-      <section class="section" id="fit">
-        <div class="section-header">
-          <div class="section-kicker">Кому подойдут</div>
-          <h2 class="section-title">Кому подходят GALE и STORM</h2>
-          <p class="section-sub">
-            Если вы хотите просто усилить штатную систему или собрать первый проект по автозвуку —
-            с этих усилителей можно спокойно начать и не разочароваться.
-          </p>
+    <section class="section" id="plan">
+      <div class="container">
+        <div class="section__head">
+          <h2>План на 90 дней</h2>
+          <p>Фокус на росте без потери качества и контроля.</p>
         </div>
 
-        <div class="who-grid">
-          <article class="who-card">
-            <h3 class="who-title">Повседневная система</h3>
-            <ul class="who-list">
-              <li>Штатная магнитола, фронт на 16 см и сабвуфер 10–12".</li>
-              <li>Нужен плотный бас без соревнований и постоянной езды «в отсечку».</li>
-              <li>Хочется, чтобы громко играло и в городе, и на трассе.</li>
-            </ul>
-          </article>
+        <div class="grid-2" id="planGrid"></div>
+      </div>
+    </section>
 
-          <article class="who-card">
-            <h3 class="who-title">Апгрейд после «ноунейма»</h3>
-            <ul class="who-list">
-              <li>Уже стоит усилитель с красивыми, но нереальными цифрами.</li>
-              <li>Саб греется, клипует, фронт хрипит, настроить звук не получается.</li>
-              <li>Black Tiger Audio — способ поменять усилитель на честный,
-                не перенося всю систему заново.</li>
-            </ul>
-          </article>
+    <section class="section" id="deal">
+      <div class="container">
+        <div class="section__head">
+          <h2>Условия</h2>
+          <p>Выбираем формат, который честно отражает стадию и защищает обе стороны.</p>
         </div>
 
-        <div class="who-grid" style="margin-top:10px;">
-          <article class="who-card">
-            <h3 class="who-title">Кому лучше не брать</h3>
-            <ul class="who-list">
-              <li>Если вы ждёте «10000 Вт» за минимальный бюджет и не готовы смотреть на реальные RMS-цифры.</li>
-              <li>Если планируется работа на 0,5 Ом и три сабвуфера в экстремальном режиме —
-                под это нужны другие решения.</li>
-              <li>Если система собирается только ради красивых цифр в объявлении, а не ради звука.</li>
-            </ul>
-          </article>
+        <div class="deal" id="dealGrid"></div>
 
-          <article class="who-card">
-            <h3 class="who-title">Примеры типовых связок</h3>
-            <ul class="who-list">
-              <li><strong>GALE:</strong> один саб 10–12" 4 Ом + фронт от магнитолы — честный бас без перегруза.</li>
-              <li><strong>GALE в мосту:</strong> саб 4 Ом в багажнике, фронт пока остаётся штатным.</li>
-              <li><strong>STORM:</strong> фронт на компонентной акустике (2 канала) + саб 4 Ом в мосту.</li>
-              <li><strong>STORM 4-канальный фронт:</strong> для тех, кто позже добавит отдельный моноблок под саб.</li>
-            </ul>
-          </article>
+        <div class="card">
+          <div class="card__title">Что получает инвестор</div>
+          <div class="muted">Прозрачность и взрослые правила игры.</div>
+          <ul class="clean">
+            <li>Еженедельная отчётность: продажи, DRR, остатки (дни покрытия), отмены/возвраты.</li>
+            <li>Ежемесячно: P&L по SKU, движение денег, план закупок и поставок.</li>
+            <li>Доступ к dataroom: отчёты маркетплейсов, инвойсы, трекинги.</li>
+          </ul>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- FAQ -->
-      <section class="section" id="faq">
-        <div class="section-header">
-          <div class="section-kicker">Вопросы и ответы</div>
-          <h2 class="section-title">FAQ по установке и эксплуатации</h2>
-          <p class="section-sub">
-            Кратко отвечаем на частые вопросы, которые задают перед покупкой
-            автомобильного усилителя Black Tiger Audio.
-          </p>
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Контакт</h2>
+          <p>Если вы готовы обсуждать условия — лучше всего короткий созвон 15 минут.</p>
         </div>
 
-        <div class="faq-grid">
-          <article class="faq-item">
-            <div class="faq-q">Нужен ли отдельный провод питания от аккумулятора?</div>
-            <div class="faq-a">
-              Да. И для GALE, и для STORM рекомендуем отдельную линию питания от АКБ
-              с предохранителем у батареи. Сечение подбирается по току системы.
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <div class="faq-q">Можно ли подключить усилитель к штатной магнитоле?</div>
-            <div class="faq-a">
-              Да, если у магнитолы есть линейные выходы (RCA). При их отсутствии
-              возможен вариант через преобразователь высокого уровня —
-              это лучше обсудить с установщиком.
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <div class="faq-q">Что по гарантии и сервису?</div>
-            <div class="faq-a">
-              Гарантия 12 месяцев. Оформить обращение можно через маркетплейс
-              (Ozon или Wildberries) или напрямую в поддержку Black Tiger Audio.
-              Мы поможем разобраться до отправки в сервис.
-            </div>
-          </article>
-
-          <article class="faq-item">
-            <div class="faq-q">Можно ли позже поменять саб/фронт, не меняя усилитель?</div>
-            <div class="faq-a">
-              Да. Усилители спроектированы с запасом. Можно смело переходить
-              на более серьёзную акустику в пределах рекомендуемого импеданса и мощности.
-            </div>
-          </article>
+        <div class="contact">
+          <a class="btn btn--primary" id="tgLink2" href="#" target="_blank" rel="noopener">Telegram</a>
+          <a class="btn btn--ghost" id="tgReviewsLink3" href="#" target="_blank" rel="noopener">Отзывы (TG)</a>
+          <a class="btn btn--ghost" id="emailLink2" href="#">Email</a>
+          <a class="btn btn--ghost" id="deckLink3" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
         </div>
-      </section>
 
-      <!-- BUY CTA -->
-      <section class="footer-cta" id="buy">
-        <div>
-          <strong>Готовы собрать честный автозвук?</strong><br />
-          Выберите усилитель под вашу систему и оформите заказ на удобной площадке.
-          Если сомневаетесь между GALE и STORM — начните со STORM, он закрывает больше сценариев.
-        </div>
-        <div class="footer-cta-buttons">
-          <a class="btn btn-ozon"
-             href="https://www.ozon.ru/seller/black-tiger-audio-XXXXXX/"
-             target="_blank" rel="noopener noreferrer">
-            Все товары Black Tiger Audio на Ozon
-          </a>
-          <a class="btn btn-wb"
-             href="https://www.wildberries.ru/brands/black-tiger-audio"
-             target="_blank" rel="noopener noreferrer">
-            Все товары Black Tiger Audio на WB
-          </a>
-        </div>
-      </section>
-
-    </div>
+        <p class="muted small">© <span id="year"></span> BLACK TIGER AUDIO</p>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    Black Tiger Audio • Автомобильные усилители без «нарисованных» киловатт.  
-    Для уточнения схем подключения и подбора усилителя под вашу систему — напишите нам перед покупкой.
-  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
