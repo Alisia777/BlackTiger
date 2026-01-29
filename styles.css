@@ -200,7 +200,7 @@ a:hover{color:white}
 
 .kpi-grid{
   display:grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
+  grid-template-columns: repeat(4, minmax(0,1fr));
   gap:12px;
 }
 .kpi{
@@ -273,6 +273,15 @@ a:hover{color:white}
   gap:20px;
   margin-bottom:22px;
 }
+
+.section__subhead{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:16px;
+  margin: 18px 0 12px;
+}
+.section__subhead .muted{margin:0; max-width: 780px;}
 .h2{
   font-family:Anton, sans-serif;
   font-size:34px;

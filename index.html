@@ -44,7 +44,7 @@
       </nav>
 
       <div class="topbar__cta">
-        <a class="btn btn--ghost" data-link="links.deck_pdf" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
+        <a class="btn btn--ghost" data-link="links.deck_pdf" href="deck.pdf" target="_blank" rel="noopener">Deck (PDF)</a>
         <a class="btn" data-link="contacts.telegram_url" href="https://t.me/Hardlivers" target="_blank" rel="noopener">Написать</a>
       </div>
     </div>
@@ -64,34 +64,52 @@
 
           <div class="kpi-grid">
             <div class="kpi">
-              <div class="kpi__label">Заказы (всего)</div>
-              <div class="kpi__value"><span data-bind="metrics.orders_total">—</span> шт</div>
-              <div class="kpi__hint">включая отмены</div>
+              <div class="kpi__label">Заказы (маркетплейсы)</div>
+              <div class="kpi__value"><span data-bind="total_metrics.orders_total" data-format="int">—</span> шт</div>
+              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
             </div>
             <div class="kpi">
-              <div class="kpi__label">Доставлено</div>
-              <div class="kpi__value"><span data-bind="metrics.orders_delivered">—</span> шт</div>
-              <div class="kpi__hint">фактически получено</div>
+              <div class="kpi__label">Доставлено (маркетплейсы)</div>
+              <div class="kpi__value"><span data-bind="total_metrics.orders_delivered" data-format="int">—</span> шт</div>
+              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
             </div>
             <div class="kpi">
-              <div class="kpi__label">GMV (Ozon)</div>
-              <div class="kpi__value"><span data-bind="metrics.gmv_rub">—</span> ₽</div>
-              <div class="kpi__hint">по доставленным заказам</div>
+              <div class="kpi__label">GMV (маркетплейсы)</div>
+              <div class="kpi__value"><span data-bind="total_metrics.gmv_rub" data-format="rub">—</span></div>
+              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
             </div>
             <div class="kpi">
               <div class="kpi__label">Выплата</div>
-              <div class="kpi__value"><span data-bind="metrics.payout_rub">—</span> ₽</div>
-              <div class="kpi__hint">после комиссии/логистики</div>
+              <div class="kpi__value"><span data-bind="total_metrics.payout_rub" data-format="rub">—</span></div>
+              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
             </div>
             <div class="kpi">
-              <div class="kpi__label">Рейтинг</div>
-              <div class="kpi__value"><span data-bind="metrics.rating">—</span> ★</div>
-              <div class="kpi__hint"><span data-bind="metrics.reviews_total">—</span> отзывов</div>
+              <div class="kpi__label">Рейтинг (Ozon)</div>
+              <div class="kpi__value"><span data-bind="metrics.rating" data-format="stars">—</span></div>
+              <div class="kpi__hint"><span data-bind="metrics.reviews_total" data-format="int">—</span> отзывов</div>
             </div>
+
+            <div class="kpi">
+              <div class="kpi__label">Рейтинг (WB)</div>
+              <div class="kpi__value"><span data-bind="wb_metrics.rating" data-format="stars">—</span></div>
+              <div class="kpi__hint">
+                GALE <span data-bind="wb_metrics.sku_ratings.GALE_3800W.rating" data-format="float1">—</span>
+                (<span data-bind="wb_metrics.sku_ratings.GALE_3800W.reviews" data-format="int">—</span>) ·
+                STORM <span data-bind="wb_metrics.sku_ratings.STORM_5800W.rating" data-format="float1">—</span>
+                (<span data-bind="wb_metrics.sku_ratings.STORM_5800W.reviews" data-format="int">—</span>)
+              </div>
+            </div>
+
+            <div class="kpi">
+              <div class="kpi__label">Отзывы (WB)</div>
+              <div class="kpi__value"><span data-bind="wb_metrics.reviews_total" data-format="int">—</span></div>
+              <div class="kpi__hint">2 SKU (GALE + STORM)</div>
+            </div>
+
             <div class="kpi kpi--accent">
               <div class="kpi__label">Логистика</div>
-              <div class="kpi__value">$<span data-bind="metrics.logistics_usd_per_kg_new">—</span>/кг</div>
-              <div class="kpi__hint">было $<span data-bind="metrics.logistics_usd_per_kg_old">—</span>/кг</div>
+              <div class="kpi__value">$<span data-bind="metrics.logistics_usd_per_kg_new" data-format="float1">—</span>/кг</div>
+              <div class="kpi__hint">было $<span data-bind="metrics.logistics_usd_per_kg_old" data-format="float1">—</span>/кг</div>
             </div>
           </div>
 
@@ -101,8 +119,8 @@
               <span class="btn__sub">Telegram: <span data-bind="contacts.telegram_handle">@Hardlivers</span></span>
             </a>
             <a class="btn btn--xl btn--ghost" data-link="links.deck_pdf" href="deck.pdf" target="_blank" rel="noopener">
-              Скачать deck (PDF)
-              <span class="btn__sub">1 страница‑заглушка — полная версия по запросу</span>
+              Deck (PDF, тизер)
+              <span class="btn__sub">1 страница‑тизер — полная версия по запросу</span>
             </a>
           </div>
 
@@ -141,7 +159,7 @@
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Traction</h2>
-          <p class="muted">Одна картинка + один блок отзывов. Всё — из выгрузок Ozon.</p>
+          <p class="muted">Ozon + WB. Графики/отзывы — из кабинетов маркетплейсов.</p>
         </div>
 
         <div class="grid2">
@@ -150,7 +168,9 @@
               <img src="assets/icons/chart.svg" alt="" />
               Динамика доставок (Ozon)
             </div>
-            <img class="chart" src="assets/traction-ozon.png" alt="График доставок" />
+            <a class="chartLink" href="assets/traction-ozon.png" target="_blank" rel="noopener">
+              <img class="chart" src="assets/traction-ozon.png" alt="График доставок (Ozon)" />
+            </a>
             <div class="card__hint">Период: 01.12–29.01. Фильтр: только доставленные заказы.</div>
           </div>
 
@@ -183,15 +203,85 @@
             <div class="mini-kpis">
               <div>
                 <div class="mini-kpis__label">Рейтинг</div>
-                <div class="mini-kpis__value"><span data-bind="metrics.rating">4.9</span> ★</div>
+                <div class="mini-kpis__value"><span data-bind="metrics.rating" data-format="stars">—</span></div>
               </div>
               <div>
                 <div class="mini-kpis__label">Всего отзывов</div>
-                <div class="mini-kpis__value"><span data-bind="metrics.reviews_total">—</span></div>
+                <div class="mini-kpis__value"><span data-bind="metrics.reviews_total" data-format="int">—</span></div>
               </div>
               <div>
                 <div class="mini-kpis__label">Доставлено</div>
-                <div class="mini-kpis__value"><span data-bind="metrics.orders_delivered">—</span> шт</div>
+                <div class="mini-kpis__value"><span data-bind="metrics.orders_delivered" data-format="int">—</span> шт</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="subhead">
+          <h3 class="h3">Wildberries (WB)</h3>
+          <p class="muted small">
+            Рейтинг по SKU: GALE <span data-bind="wb_metrics.sku_ratings.GALE_3800W.rating" data-format="float1">—</span> (<span
+              data-bind="wb_metrics.sku_ratings.GALE_3800W.reviews"
+              data-format="int"
+              >—</span
+            >), STORM <span data-bind="wb_metrics.sku_ratings.STORM_5800W.rating" data-format="float1">—</span> (<span
+              data-bind="wb_metrics.sku_ratings.STORM_5800W.reviews"
+              data-format="int"
+              >—</span
+            >). Продажи/выплаты WB — добавим после выгрузки.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card card--chart">
+            <div class="card__title">
+              <img src="assets/icons/chart.svg" alt="" />
+              Динамика продаж (WB)
+            </div>
+            <a class="chartLink" href="assets/traction-wb.png" target="_blank" rel="noopener">
+              <img class="chart" src="assets/traction-wb.png" alt="График продаж (WB)" />
+            </a>
+            <div class="card__hint">Источник: WB Partners. Данные по периодам — по запросу.</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">
+              <img src="assets/icons/handshake.svg" alt="" />
+              Пример отзывов (WB)
+            </div>
+
+            <div class="quote">
+              <div class="quote__stars">★★★★★</div>
+              <div class="quote__text">«Советую этот усилитель — по мощности понравился.»</div>
+              <div class="quote__meta">Gale 3800W • WB</div>
+            </div>
+
+            <div class="quote">
+              <div class="quote__stars">★★★★★</div>
+              <div class="quote__text">«Красивый дизайн, компактный! Классный, маленький — мне хватает!»</div>
+              <div class="quote__meta">Gale 3800W • WB</div>
+            </div>
+
+            <div class="quote">
+              <div class="quote__stars">★★★★★</div>
+              <div class="quote__text">«Все отлично. Минусов нет. Работает нормально.»</div>
+              <div class="quote__meta">Gale 3800W • WB</div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="mini-kpis">
+              <div>
+                <div class="mini-kpis__label">Рейтинг</div>
+                <div class="mini-kpis__value"><span data-bind="wb_metrics.rating" data-format="stars">—</span></div>
+              </div>
+              <div>
+                <div class="mini-kpis__label">Всего отзывов</div>
+                <div class="mini-kpis__value"><span data-bind="wb_metrics.reviews_total" data-format="int">—</span></div>
+              </div>
+              <div>
+                <div class="mini-kpis__label">SKU</div>
+                <div class="mini-kpis__value">2 (GALE / STORM)</div>
               </div>
             </div>
           </div>
@@ -204,7 +294,7 @@
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Юнит‑экономика</h2>
-          <p class="muted">Средние значения по факту (Ozon). Для масштабирования — ключевой экран.</p>
+          <p class="muted">Средние значения по факту (Ozon). WB добавим при выгрузке (чтобы цифры бились «тут и там»).</p>
         </div>
 
         <div class="grid2">

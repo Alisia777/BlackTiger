@@ -28,6 +28,19 @@
     "logistics_usd_per_kg_old": 8.9,
     "logistics_usd_per_kg_new": 3.3
   },
+  "wb_metrics": {
+    "orders_total": null,
+    "orders_delivered": null,
+    "gmv_rub": null,
+    "payout_rub": null,
+    "rating": 4.8,
+    "reviews_total": 15,
+    "sku_ratings": {
+      "GALE_3800W": {"rating": 5.0, "reviews": 7},
+      "STORM_5800W": {"rating": 4.6, "reviews": 8}
+    },
+    "note": "WB‑продажи/GMV/выплаты подставим после выгрузки. Сейчас — рейтинг/отзывы."
+  },
   "unit_economics": {
     "STORM_5800W": {
       "sku": 3139066863,
