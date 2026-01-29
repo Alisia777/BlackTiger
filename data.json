@@ -1,40 +1,47 @@
 {
   "brand": {
     "name": "BLACK TIGER AUDIO",
-    "tagline": "Техника, что рвёт тишину",
-    "promise": "Честные характеристики, поддержка по подключению и настройке. Спрос подтверждён отзывами.",
-    "links": {
-      "telegram_channel": "https://t.me/blacktiger_audio",
-      "telegram_contact": "https://t.me/blacktiger_support",
-      "wb_storm": "#",
-      "ozon_storm": "#",
-      "wb_gale": "#",
-      "ozon_gale": "#",
-      "invest": "invest/"
+    "tagline": "Техника, что рвёт тишину.",
+    "colors": {
+      "orange": "#FF6600",
+      "black": "#0B0B0B",
+      "steel": "#333333"
     }
   },
-  "products": [
-    {
-      "id": "storm",
-      "name": "Storm 5800W",
-      "channels": "4-канальный • AB",
-      "note": "Компактный усилитель для фронта/тыла. Запас по мощности, честная сборка.",
-      "priceFrom": "7000 ₽"
+  "contacts": {
+    "telegram_handle": "@Hardlivers",
+    "telegram_url": "https://t.me/Hardlivers",
+    "email": "S@artyuhin.ru",
+    "email_url": "mailto:S@artyuhin.ru"
+  },
+  "links": {
+    "deck_pdf": "deck.pdf"
+  },
+  "updated_at": "2026-01-29",
+  "metrics": {
+    "orders_total": 46,
+    "orders_delivered": 29,
+    "gmv_rub": 153969,
+    "payout_rub": 85428,
+    "rating": 4.9,
+    "reviews_total": 18,
+    "logistics_usd_per_kg_old": 8.9,
+    "logistics_usd_per_kg_new": 3.3
+  },
+  "unit_economics": {
+    "STORM_5800W": {
+      "sku": 3139066863,
+      "avg_price_rub": 5844,
+      "avg_payout_rub": 3390,
+      "cogs_rub": 1586,
+      "gross_profit_rub": 1804
     },
-    {
-      "id": "gale",
-      "name": "Gale 3800W",
-      "channels": "2-канальный • AB",
-      "note": "Чистый звук и контроль. Идеален под фронт или мостом.",
-      "priceFrom": "—"
-    }
-  ],
-  "socialProof": {
-    "wb": {
-      "rating": "4.9★"
-    },
-    "ozon": {
-      "rating": "4.9★"
+    "GALE_3800W": {
+      "sku": 3210383821,
+      "avg_price_rub": 4652,
+      "avg_payout_rub": 2400,
+      "cogs_rub": 1320,
+      "gross_profit_rub": 1080
     }
   }
 }
