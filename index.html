@@ -4,27 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>BLACK TIGER AUDIO — Investor</title>
-  <meta name="description" content="Инвест-предложение Black Tiger Audio: честный автозвук, подтвержденные продажи, фокус на оборотке и масштабировании.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <title>Black Tiger Audio — Investor snapshot</title>
+  <meta name="description" content="Инвест‑предложение Black Tiger Audio: честный автозвук, подтверждённые продажи, юнит‑экономика и план масштабирования.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
   <header class="topbar">
     <div class="container topbar__inner">
       <div class="brand">
-        <div class="brand__mark" aria-hidden="true">
-          <!-- Fox mark (Sunfox). Stroke uses currentColor for easy recolor. -->
-          <svg class="brand__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-            <path d="M32 6L48 16L58 10V30C58 44 47 56 32 58C17 56 6 44 6 30V10L16 16L32 6Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M22 30C25 26 28.5 24 32 24C35.5 24 39 26 42 30" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <path d="M26 41C28.5 44.5 30.5 46 32 46C33.5 46 35.5 44.5 38 41" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="25" cy="33" r="2" fill="currentColor"/>
-            <circle cx="39" cy="33" r="2" fill="currentColor"/>
-          </svg>
+        <div class="brand__mark">
+          <img class="brand__mark-img" src="assets/tiger.png" alt="Black Tiger Audio">
         </div>
         <div class="brand__text">
           <div class="brand__name">BLACK TIGER AUDIO</div>
@@ -35,6 +33,8 @@
       <nav class="nav">
         <a href="#traction">Traction</a>
         <a href="#strategy">Стратегия</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#community">Отзывы</a>
         <a href="#economics">Экономика</a>
         <a href="#deal">Условия</a>
         <a href="#contact">Контакт</a>
@@ -42,7 +42,7 @@
 
       <div class="topbar__cta">
         <a class="btn btn--ghost" id="deckLink" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
-        <a class="btn btn--primary" id="tgLink" href="#" target="_blank" rel="noopener">Telegram</a>
+        <a class="btn btn--primary" id="tgLink" href="#" target="_blank" rel="noopener">Написать</a>
       </div>
     </div>
   </header>
@@ -52,6 +52,7 @@
       <div class="container hero__inner">
         <div class="hero__left">
           <div class="pill" id="updatedPill">Обновлено: —</div>
+
           <h1 id="heroTitle">BLACK TIGER AUDIO</h1>
           <p class="hero__tagline" id="heroTagline"></p>
 
@@ -64,8 +65,8 @@
 
           <div class="hero__actions">
             <a class="btn btn--primary" id="deckLink2" href="deck.pdf" target="_blank" rel="noopener">Скачать deck</a>
-            <a class="btn btn--ghost" id="tgReviewsLink" href="#" target="_blank" rel="noopener">Отзывы (TG)</a>
-            <a class="btn btn--ghost" id="emailLink" href="#">Email</a>
+            <a class="btn btn--ghost" id="tgLinkHero" href="#" target="_blank" rel="noopener">Telegram</a>
+            <a class="btn btn--ghost" href="#deal">Условия</a>
           </div>
 
           <p class="disclaimer">
@@ -74,12 +75,11 @@
         </div>
 
         <div class="hero__right">
-          <div class="card card--glow card--brand">
-            <img class="card__watermark" src="assets/tiger_logo.png" alt="Black Tiger logo" loading="lazy">
+          <div class="card card--glow">
             <div class="card__title">Ключевая мысль</div>
             <p class="card__text">
-              Спрос и качество подтверждены отзывами. Узкое место сейчас — наличие и оборотный капитал.
-              Деньги в проекте превращаются в товар → продажи → масштаб.
+              Спрос и качество подтверждены рейтингами и отзывами. Узкое место сейчас — наличие и оборотный капитал.
+              Инвестиции ускоряют цикл: закупка → поставка → продажи → масштаб рекламы по KPI.
             </p>
             <div class="card__divider"></div>
             <div class="mini">
@@ -88,9 +88,19 @@
             </div>
           </div>
 
-          <div class="media">
-            <img src="assets/wb_ratings.png" alt="WB ratings screenshot" loading="lazy">
-            <div class="media__caption">WB: рейтинги и отзывы по двум SKU</div>
+          <div class="card card--product">
+            <div class="card__title">Флагманы: 2 SKU</div>
+            <div class="shots">
+              <figure class="shot">
+                <img src="assets/storm-front.jpg" alt="STORM 5800W">
+                <figcaption>STORM 5800W • 4‑канальный</figcaption>
+              </figure>
+              <figure class="shot">
+                <img src="assets/gale-front.jpg" alt="GALE 3800W">
+                <figcaption>GALE 3800W • 2‑канальный</figcaption>
+              </figure>
+            </div>
+            <div class="muted small">Фото продукта: blacktigeraudio.ru</div>
           </div>
         </div>
       </div>
@@ -103,26 +113,35 @@
           <p>Факты вместо обещаний.</p>
         </div>
 
-        <div class="grid-3">
+        <div class="grid-2">
           <div class="card">
             <div class="card__title">Ozon: динамика доставок</div>
-            <img class="img" src="assets/ozon_cum_delivered.png" alt="Ozon cumulative delivered chart" loading="lazy">
+            <img class="img" src="assets/ozon_cum_delivered.png" alt="Ozon cumulative delivered chart">
             <div class="muted">Источник: выгрузка заказов + отчёт начислений (период 01.12.2025–29.01.2026).</div>
           </div>
 
           <div class="card">
-            <div class="card__title">Пример отзыва (WB)</div>
-            <img class="img" src="assets/wb_review.png" alt="WB review screenshot" loading="lazy">
-            <div class="muted">Важно: мы отвечаем на отзывы и помогаем с подключением/настройкой.</div>
+            <div class="card__title">WB: рейтинги по двум SKU</div>
+            <a class="media__link" href="assets/proof_wb_ratings.png" target="_blank" rel="noopener">
+              <img class="img" src="assets/proof_wb_ratings.png" alt="WB ratings screenshot">
+            </a>
+            <div class="muted">Оценки и отзывы подтверждают качество и сервис.</div>
           </div>
 
           <div class="card">
-            <div class="card__title">Живой отзыв (Telegram)</div>
-            <img class="img" src="assets/tg_review.png" alt="Telegram review screenshot" loading="lazy">
-            <div class="muted">Отзывы и вопросы по установке — в Telegram. Всё живое, без накруток.</div>
-            <div style="margin-top:12px">
-              <a class="btn btn--primary" id="tgReviewsLink2" href="#" target="_blank" rel="noopener">Открыть канал отзывов</a>
-            </div>
+            <div class="card__title">Пример отзыва (WB) + ответ бренда</div>
+            <a class="media__link" href="assets/proof_wb_review.png" target="_blank" rel="noopener">
+              <img class="img" src="assets/proof_wb_review.png" alt="WB review screenshot">
+            </a>
+            <div class="muted">Мы отвечаем на отзывы и помогаем с подключением/настройкой.</div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">Живые отзывы (Telegram)</div>
+            <a class="media__link" href="assets/proof_tg.png" target="_blank" rel="noopener">
+              <img class="img" src="assets/proof_tg.png" alt="Telegram feedback screenshot">
+            </a>
+            <div class="muted">Чат с покупателем (без персональных данных). Канал — по ссылке ниже.</div>
           </div>
         </div>
       </div>
@@ -131,24 +150,51 @@
     <section class="section" id="strategy">
       <div class="container">
         <div class="section__head">
-          <h2>Стратегия</h2>
-          <p id="strategyHeadline">—</p>
+          <h2>Стратегия бренда</h2>
+          <p class="muted">От автозвука — к линейке авто‑электроники и экосистеме устройств.</p>
         </div>
 
-        <div class="grid-3">
+        <div class="grid grid--3" id="strategyGrid"></div>
+
+        <div class="card card--glow founder">
+          <div class="card__title" id="founderTitle">Основатель</div>
+          <ul class="clean" id="founderList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="roadmap">
+      <div class="container">
+        <div class="section__head">
+          <h2>Roadmap 12 месяцев</h2>
+          <p class="muted">План расширения линейки и каналов продаж без потери качества.</p>
+        </div>
+
+        <div class="grid grid--3" id="roadmapGrid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="community">
+      <div class="container">
+        <div class="section__head">
+          <h2>Сообщество и поддержка</h2>
+          <p class="muted">Сервис — часть продукта: от консультации до настройки.</p>
+        </div>
+
+        <div class="grid grid--2">
           <div class="card">
-            <div class="card__title">Куда идём</div>
-            <ul class="clean" id="strategyPoints"></ul>
+            <div class="card__title">Telegram‑канал</div>
+            <p class="card__text">Живые отзывы, ответы по установке и настройке, обратная связь от покупателей.</p>
+            <div class="actions-row">
+              <a class="btn btn--primary" id="tgChannelLink" href="#" target="_blank" rel="noopener">Открыть канал</a>
+              <a class="btn btn--ghost" href="#traction">Смотреть доказательства</a>
+            </div>
           </div>
 
           <div class="card">
-            <div class="card__title">Почему выиграем</div>
-            <ul class="clean" id="strategyMoat"></ul>
-          </div>
-
-          <div class="card">
-            <div class="card__title" id="teamTitle">Опыт команды</div>
-            <ul class="clean" id="teamBullets"></ul>
+            <div class="card__title">Сервис как часть продукта</div>
+            <ul class="clean" id="serviceList"></ul>
+            <div class="muted">Цель — чтобы система играла чисто и стабильно, а покупатель не остался один на один с установкой.</div>
           </div>
         </div>
       </div>
@@ -164,10 +210,9 @@
         <div class="products" id="productsGrid"></div>
 
         <div class="note">
-          <div class="note__title">Почему маржа растёт</div>
+          <div class="note__title">Почему вклад растёт</div>
           <div class="note__text">
-            Вы уже подняли цены и сократили международную логистику. Это увеличивает вклад на единицу
-            и позволяет масштабировать рекламу, не ломая экономику.
+            Мы подняли цены и сократили международную логистику. Это увеличивает вклад на единицу и позволяет масштабировать рекламу, не ломая экономику.
           </div>
         </div>
       </div>
@@ -188,7 +233,7 @@
       <div class="container">
         <div class="section__head">
           <h2>Условия</h2>
-          <p>Выбираем формат, который честно отражает стадию и защищает обе стороны.</p>
+          <p class="muted" id="dealHeadline">Выбираем формат, который честно отражает стадию и защищает обе стороны.</p>
         </div>
 
         <div class="deal" id="dealGrid"></div>
@@ -214,7 +259,6 @@
 
         <div class="contact">
           <a class="btn btn--primary" id="tgLink2" href="#" target="_blank" rel="noopener">Telegram</a>
-          <a class="btn btn--ghost" id="tgReviewsLink3" href="#" target="_blank" rel="noopener">Отзывы (TG)</a>
           <a class="btn btn--ghost" id="emailLink2" href="#">Email</a>
           <a class="btn btn--ghost" id="deckLink3" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
         </div>

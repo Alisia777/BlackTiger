@@ -1,13 +1,15 @@
-# BLACK TIGER AUDIO — Investor page (v6)
+# BLACK TIGER AUDIO — инвест-страница
 
-Как обновлять цифры:
-- открой `data.json` и поменяй значения (kpi, products, links).
-- залей на GitHub Pages (папка /invest/ или корень репозитория).
+## Быстрый деплой (GitHub Pages)
+1) Скопируйте содержимое архива в папку `invest/` репозитория.
+2) Убедитесь, что файлы лежат рядом с `index.html`:
+   - `deck.pdf` (или поменяйте ссылку в `data.json -> brand.links.deck`)
+   - папка `assets/` (картинки)
+3) Откройте страницу: `https://<username>.github.io/invest/`
 
-Что заменить обязательно:
-- `brand.links.telegram`
-- `brand.links.email`
-- `deck.pdf` (на ваш актуальный PDF)
+## Важно
+- GitHub Pages чувствителен к регистру: `deck.pdf` ≠ `Deck.pdf`.
+- Если `deck.pdf` отсутствует, кнопка автоматически ведёт в Telegram (запросить deck).
 
-Дисклеймер:
-Информация на странице — для обсуждения с инвесторами и не является публичной офертой.
+## Что редактировать
+- `data.json` — все цифры, ссылки, стратегия, условия.
