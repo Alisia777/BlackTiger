@@ -1,273 +1,374 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <title>BLACK TIGER AUDIO — автозвук</title>
+  <meta name="description" content="BLACK TIGER AUDIO — честный автозвук: усилители Storm и Gale, поддержка по подключению и живые отзывы." />
 
-  <title>Black Tiger Audio — Investor snapshot</title>
-  <meta name="description" content="Инвест‑предложение Black Tiger Audio: честный автозвук, подтверждённые продажи, юнит‑экономика и план масштабирования.">
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="icon" href="assets/favicon-192.png" sizes="192x192" type="image/png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
-<body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <div class="brand">
-        <div class="brand__mark">
-          <img class="brand__mark-img" src="assets/tiger.png" alt="Black Tiger Audio">
-        </div>
-        <div class="brand__text">
-          <div class="brand__name">BLACK TIGER AUDIO</div>
-          <div class="brand__sub">Investor snapshot</div>
-        </div>
-      </div>
 
-      <nav class="nav">
-        <a href="#traction">Traction</a>
-        <a href="#strategy">Стратегия</a>
-        <a href="#roadmap">Roadmap</a>
-        <a href="#community">Отзывы</a>
-        <a href="#economics">Экономика</a>
-        <a href="#deal">Условия</a>
-        <a href="#contact">Контакт</a>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <img src="assets/logo-tiger.png" alt="BLACK TIGER AUDIO" />
+        <div>
+          <div class="name">BLACK TIGER AUDIO</div>
+          <div class="small">автозвук • усилители • поддержка</div>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Навигация">
+        <a href="#products">Усилители</a>
+        <a href="#trust">Почему нам верят</a>
+        <a href="#roadmap">Стратегия</a>
+        <a href="#community">Сообщество</a>
+        <a href="invest/">Инвесторам</a>
       </nav>
 
-      <div class="topbar__cta">
-        <a class="btn btn--ghost" id="deckLink" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
-        <a class="btn btn--primary" id="tgLink" href="#" target="_blank" rel="noopener">Написать</a>
+      <div class="actions">
+        <a id="tgBtn3" class="btn sm ghost" href="#">Telegram</a>
+        <a id="contactBtn" class="btn sm primary" href="#">Задать вопрос</a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__left">
-          <div class="pill" id="updatedPill">Обновлено: —</div>
+      <div class="container hero-wrap">
+        <div class="card hero-card">
+          <div class="card-inner">
+            <div class="badge">Официальная страница бренда</div>
+            <div style="height:14px"></div>
 
-          <h1 id="heroTitle">BLACK TIGER AUDIO</h1>
-          <p class="hero__tagline" id="heroTagline"></p>
+            <h1>BLACK TIGER AUDIO</h1>
+            <p class="tagline" id="brandTagline">Техника, что рвёт тишину</p>
+            <p id="brandPromise">Честные характеристики, поддержка по подключению и настройке. Спрос подтверждён отзывами.</p>
 
-          <div class="hero__grid" id="kpiGrid"></div>
+            <div class="row" style="margin-top:16px">
+              <a class="btn primary" href="#products">Выбрать усилитель</a>
+              <a id="tgBtn2" class="btn" href="#">Отзывы в Telegram</a>
+              <a class="btn ghost" href="invest/">Инвест-страница</a>
+            </div>
 
-          <div class="hero__note">
-            <div class="hero__note-title">Позиционирование</div>
-            <ul class="clean" id="positioningList"></ul>
+            <div class="hr"></div>
+
+            <div class="grid three">
+              <div class="kpi">
+                <div class="label">Рейтинг на WB</div>
+                <div class="value" id="ratingWb">—</div>
+                <div class="hint">по отзывам покупателей</div>
+              </div>
+              <div class="kpi">
+                <div class="label">Рейтинг на Ozon</div>
+                <div class="value" id="ratingOzon">—</div>
+                <div class="hint">по отзывам покупателей</div>
+              </div>
+              <div class="kpi">
+                <div class="label">Поддержка</div>
+                <div class="value">в чате</div>
+                <div class="hint">подскажем подключение/настройку</div>
+              </div>
+            </div>
           </div>
-
-          <div class="hero__actions">
-            <a class="btn btn--primary" id="deckLink2" href="deck.pdf" target="_blank" rel="noopener">Скачать deck</a>
-            <a class="btn btn--ghost" id="tgLinkHero" href="#" target="_blank" rel="noopener">Telegram</a>
-            <a class="btn btn--ghost" href="#deal">Условия</a>
-          </div>
-
-          <p class="disclaimer">
-            Информация не является публичной офертой. Данные по маркетплейсам предоставляются по запросу (dataroom).
-          </p>
         </div>
 
-        <div class="hero__right">
-          <div class="card card--glow">
-            <div class="card__title">Ключевая мысль</div>
-            <p class="card__text">
-              Спрос и качество подтверждены рейтингами и отзывами. Узкое место сейчас — наличие и оборотный капитал.
-              Инвестиции ускоряют цикл: закупка → поставка → продажи → масштаб рекламы по KPI.
-            </p>
-            <div class="card__divider"></div>
-            <div class="mini">
-              <div class="mini__label">Миссия</div>
-              <div class="mini__value" id="missionText"></div>
+        <div class="hero-art">
+          <img src="assets/hero-tiger.png" alt="Tiger hero" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section id="trust" class="section tight">
+      <div class="container">
+        <h2>Почему нам верят</h2>
+        <p>Мы не продаём «маркетинговые ватты». Мы продаём понятный продукт и говорим с клиентом нормально.</p>
+
+        <div class="grid four" style="margin-top:16px">
+          <div class="card">
+            <div class="card-inner">
+              <h3>Честные характеристики</h3>
+              <p>Карточки без фантазий. Пишем как есть — чтобы покупатель получил ожидаемый результат.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <h3>Поддержка</h3>
+              <p>Отвечаем на вопросы по питанию, предохранителям, RCA, настройке и подключению.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <h3>Живые отзывы</h3>
+              <p>Не «скрин ради скрина». Есть Telegram‑канал и реальные сообщения от покупателей.</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-inner">
+              <h3>Сильная экономика</h3>
+              <p>Прямая работа с заводом и логистика под контролем — за счёт этого держим цену.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="figure" data-zoom="assets/wb_ratings.png" style="cursor:zoom-in">
+            <img src="assets/wb_ratings.png" alt="WB рейтинги" loading="lazy" />
+            <div class="cap">WB: рейтинг и отзывы (клик — увеличить)</div>
+          </div>
+          <div class="figure" data-zoom="assets/tg-review.png" style="cursor:zoom-in">
+            <img src="assets/tg-review.png" alt="Telegram отзывы" loading="lazy" />
+            <div class="cap">Telegram: живой отзыв (клик — увеличить)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section">
+      <div class="container">
+        <h2>Усилители</h2>
+        <p>Два первых SKU, которые уже продаются и получают отзывы. Дальше — расширение линейки.</p>
+
+        <div class="grid two" style="margin-top:16px">
+          <div class="card product">
+            <div class="card-inner">
+              <div class="product-head">
+                <div>
+                  <div class="product-name">Storm 5800W</div>
+                  <div class="product-meta">
+                    <span class="chip">4‑канальный • AB</span>
+                    <span class="chip">компактный корпус</span>
+                    <span class="chip">под фронт/тыл</span>
+                  </div>
+                </div>
+                <div class="kpi" style="text-align:right">
+                  <div class="label">Цена</div>
+                  <div class="value" id="stormPrice">—</div>
+                </div>
+              </div>
+
+              <div class="product-img">
+                <img src="assets/storm-front.jpg" alt="Storm 5800W" loading="lazy" />
+              </div>
+
+              <p style="margin-top:12px">Компактный усилитель, который любят за дизайн и стабильную работу. Подскажем по подключению и настройке.</p>
+
+              <div class="product-actions">
+                <a id="stormWb" class="btn primary" href="#">Купить на WB</a>
+                <a id="stormOzon" class="btn" href="#">Купить на Ozon</a>
+                <a class="btn ghost" href="#community">Задать вопрос</a>
+              </div>
             </div>
           </div>
 
-          <div class="card card--product">
-            <div class="card__title">Флагманы: 2 SKU</div>
-            <div class="shots">
-              <figure class="shot">
-                <img src="assets/storm-front.jpg" alt="STORM 5800W">
-                <figcaption>STORM 5800W • 4‑канальный</figcaption>
-              </figure>
-              <figure class="shot">
-                <img src="assets/gale-front.jpg" alt="GALE 3800W">
-                <figcaption>GALE 3800W • 2‑канальный</figcaption>
-              </figure>
-            </div>
-            <div class="muted small">Фото продукта: blacktigeraudio.ru</div>
-          </div>
-        </div>
-      </div>
-    </section>
+          <div class="card product">
+            <div class="card-inner">
+              <div class="product-head">
+                <div>
+                  <div class="product-name">Gale 3800W</div>
+                  <div class="product-meta">
+                    <span class="chip">2‑канальный • AB</span>
+                    <span class="chip">чистый звук</span>
+                    <span class="chip">под фронт / мост</span>
+                  </div>
+                </div>
+                <div class="kpi" style="text-align:right">
+                  <div class="label">Цена</div>
+                  <div class="value" id="galePrice">—</div>
+                </div>
+              </div>
 
-    <section class="section" id="traction">
-      <div class="container">
-        <div class="section__head">
-          <h2>Traction</h2>
-          <p>Факты вместо обещаний.</p>
-        </div>
+              <div class="product-img">
+                <img src="assets/gale-front.jpg" alt="Gale 3800W" loading="lazy" />
+              </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <div class="card__title">Ozon: динамика доставок</div>
-            <img class="img" src="assets/ozon_cum_delivered.png" alt="Ozon cumulative delivered chart">
-            <div class="muted">Источник: выгрузка заказов + отчёт начислений (период 01.12.2025–29.01.2026).</div>
-          </div>
+              <p style="margin-top:12px">Двухканальный вариант — когда важны контроль и запас. Стабильная работа и понятная схема подключения.</p>
 
-          <div class="card">
-            <div class="card__title">WB: рейтинги по двум SKU</div>
-            <a class="media__link" href="assets/proof_wb_ratings.png" target="_blank" rel="noopener">
-              <img class="img" src="assets/proof_wb_ratings.png" alt="WB ratings screenshot">
-            </a>
-            <div class="muted">Оценки и отзывы подтверждают качество и сервис.</div>
-          </div>
-
-          <div class="card">
-            <div class="card__title">Пример отзыва (WB) + ответ бренда</div>
-            <a class="media__link" href="assets/proof_wb_review.png" target="_blank" rel="noopener">
-              <img class="img" src="assets/proof_wb_review.png" alt="WB review screenshot">
-            </a>
-            <div class="muted">Мы отвечаем на отзывы и помогаем с подключением/настройкой.</div>
-          </div>
-
-          <div class="card">
-            <div class="card__title">Живые отзывы (Telegram)</div>
-            <a class="media__link" href="assets/proof_tg.png" target="_blank" rel="noopener">
-              <img class="img" src="assets/proof_tg.png" alt="Telegram feedback screenshot">
-            </a>
-            <div class="muted">Чат с покупателем (без персональных данных). Канал — по ссылке ниже.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="strategy">
-      <div class="container">
-        <div class="section__head">
-          <h2>Стратегия бренда</h2>
-          <p class="muted">От автозвука — к линейке авто‑электроники и экосистеме устройств.</p>
-        </div>
-
-        <div class="grid grid--3" id="strategyGrid"></div>
-
-        <div class="card card--glow founder">
-          <div class="card__title" id="founderTitle">Основатель</div>
-          <ul class="clean" id="founderList"></ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="roadmap">
-      <div class="container">
-        <div class="section__head">
-          <h2>Roadmap 12 месяцев</h2>
-          <p class="muted">План расширения линейки и каналов продаж без потери качества.</p>
-        </div>
-
-        <div class="grid grid--3" id="roadmapGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="community">
-      <div class="container">
-        <div class="section__head">
-          <h2>Сообщество и поддержка</h2>
-          <p class="muted">Сервис — часть продукта: от консультации до настройки.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <div class="card__title">Telegram‑канал</div>
-            <p class="card__text">Живые отзывы, ответы по установке и настройке, обратная связь от покупателей.</p>
-            <div class="actions-row">
-              <a class="btn btn--primary" id="tgChannelLink" href="#" target="_blank" rel="noopener">Открыть канал</a>
-              <a class="btn btn--ghost" href="#traction">Смотреть доказательства</a>
+              <div class="product-actions">
+                <a id="galeWb" class="btn primary" href="#">Купить на WB</a>
+                <a id="galeOzon" class="btn" href="#">Купить на Ozon</a>
+                <a class="btn ghost" href="invest/">Инвест-страница</a>
+              </div>
             </div>
           </div>
+        </div>
+
+        <p class="small" style="margin-top:14px">* Ссылки на маркетплейсы и цены правятся в файле <code>data.json</code>.</p>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section tight">
+      <div class="container">
+        <h2>Стратегия бренда</h2>
+        <p>Понятная лестница развития: сначала — товар + сервис, дальше — линейка и «умные» компоненты.</p>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <div class="card-inner road">
+              <div class="step">
+                <div class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M4 14c3-6 6-6 9 0s6 6 7 0" stroke="rgba(255,102,0,1)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M4 10c3-6 6-6 9 0s6 6 7 0" stroke="rgba(255,102,0,.55)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>Сейчас</h4>
+                  <div class="when">усилители + поддержка</div>
+                  <p>Дожимаем карточки, отзывы, рекламу и оборотку. Наращиваем повторные продажи.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 3v18" stroke="rgba(255,102,0,1)" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M7 9c0-2 2-4 5-4s5 2 5 4-2 4-5 4-5-2-5-4Z" stroke="rgba(255,102,0,.75)" stroke-width="2"/>
+                    <path d="M7 15c0-2 2-4 5-4s5 2 5 4-2 4-5 4-5-2-5-4Z" stroke="rgba(255,102,0,.45)" stroke-width="2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>0–12 месяцев</h4>
+                  <div class="when">расширение линейки</div>
+                  <p>Акустика, сабы, кабели, аксессуары — всё, что покупают вместе с усилителем.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <rect x="4" y="6" width="16" height="12" rx="2" stroke="rgba(255,102,0,1)" stroke-width="2"/>
+                    <path d="M8 10h8M8 14h5" stroke="rgba(255,102,0,.65)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>12–24 месяца</h4>
+                  <div class="when">мультимедиа и «умные» компоненты</div>
+                  <p>Магнитолы, сенсорные панели, интеграция с датчиками и телеметрией.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="ico" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 3v4M15 3v4M7 7h10" stroke="rgba(255,102,0,.65)" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="6" y="7" width="12" height="14" rx="2" stroke="rgba(255,102,0,1)" stroke-width="2"/>
+                    <path d="M9 12h6M9 16h6" stroke="rgba(255,102,0,.55)" stroke-width="2" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <h4>2–3 года</h4>
+                  <div class="when">экосистема и масштаб</div>
+                  <p>Связанные устройства, сервис, партнёрская сеть. Бренд, которому доверяют.</p>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="card">
-            <div class="card__title">Сервис как часть продукта</div>
-            <ul class="clean" id="serviceList"></ul>
-            <div class="muted">Цель — чтобы система играла чисто и стабильно, а покупатель не остался один на один с установкой.</div>
+            <div class="card-inner">
+              <h3>Как мы это сделаем</h3>
+              <p>Без «сказок» и без сжигания бюджета.</p>
+              <div class="hr"></div>
+
+              <div class="grid two">
+                <div class="kpi">
+                  <div class="label">1) Оборотка</div>
+                  <div class="value">в товар</div>
+                  <div class="hint">скорость повторных закупок решает рост</div>
+                </div>
+                <div class="kpi">
+                  <div class="label">2) Качество</div>
+                  <div class="value">контроль</div>
+                  <div class="hint">снижаем возвраты и негатив</div>
+                </div>
+                <div class="kpi">
+                  <div class="label">3) Сервис</div>
+                  <div class="value">поддержка</div>
+                  <div class="hint">помогаем собрать звук, а не «просто продаём»</div>
+                </div>
+                <div class="kpi">
+                  <div class="label">4) Линейка</div>
+                  <div class="value">кросс‑селл</div>
+                  <div class="hint">кабели/аксессуары/акустика — рост корзины</div>
+                </div>
+              </div>
+
+              <div class="row" style="margin-top:18px">
+                <a class="btn primary" href="invest/">Посмотреть условия инвестирования</a>
+                <a id="tgBtn" class="btn" href="#">Telegram-канал</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="community" class="section">
+      <div class="container">
+        <h2>Сообщество</h2>
+        <p>Нам важна репутация. Поэтому мы не прячем общение и показываем живые отзывы.</p>
+
+        <div class="grid two" style="margin-top:18px">
+          <div class="card">
+            <div class="card-inner">
+              <h3>Telegram</h3>
+              <p>Канал с отзывами и вопросами — можно спросить про подключение, выбор, совместимость.</p>
+              <div class="row" style="margin-top:12px">
+                <a id="tgBtn2" class="btn primary" href="#">Перейти в Telegram</a>
+                <a class="btn" href="invest/">Инвест-страница</a>
+              </div>
+              <div class="hr"></div>
+              <p class="small">Если хочешь — добавим счётчик подписчиков/постов и отдельную страницу «Отзывы».</p>
+            </div>
+          </div>
+
+          <div class="figure" data-zoom="assets/tg-review.png" style="cursor:zoom-in">
+            <img src="assets/tg-review.png" alt="Telegram отзыв" loading="lazy" />
+            <div class="cap">Пример живого отзыва (клик — увеличить)</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="economics">
-      <div class="container">
-        <div class="section__head">
-          <h2>Юнит‑экономика</h2>
-          <p>Средние значения по факту (Ozon). Для масштабирования — ключевой экран.</p>
-        </div>
-
-        <div class="products" id="productsGrid"></div>
-
-        <div class="note">
-          <div class="note__title">Почему вклад растёт</div>
-          <div class="note__text">
-            Мы подняли цены и сократили международную логистику. Это увеличивает вклад на единицу и позволяет масштабировать рекламу, не ломая экономику.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="plan">
-      <div class="container">
-        <div class="section__head">
-          <h2>План на 90 дней</h2>
-          <p>Фокус на росте без потери качества и контроля.</p>
-        </div>
-
-        <div class="grid-2" id="planGrid"></div>
-      </div>
-    </section>
-
-    <section class="section" id="deal">
-      <div class="container">
-        <div class="section__head">
-          <h2>Условия</h2>
-          <p class="muted" id="dealHeadline">Выбираем формат, который честно отражает стадию и защищает обе стороны.</p>
-        </div>
-
-        <div class="deal" id="dealGrid"></div>
-
-        <div class="card">
-          <div class="card__title">Что получает инвестор</div>
-          <div class="muted">Прозрачность и взрослые правила игры.</div>
-          <ul class="clean">
-            <li>Еженедельная отчётность: продажи, DRR, остатки (дни покрытия), отмены/возвраты.</li>
-            <li>Ежемесячно: P&L по SKU, движение денег, план закупок и поставок.</li>
-            <li>Доступ к dataroom: отчёты маркетплейсов, инвойсы, трекинги.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__head">
-          <h2>Контакт</h2>
-          <p>Если вы готовы обсуждать условия — лучше всего короткий созвон 15 минут.</p>
-        </div>
-
-        <div class="contact">
-          <a class="btn btn--primary" id="tgLink2" href="#" target="_blank" rel="noopener">Telegram</a>
-          <a class="btn btn--ghost" id="emailLink2" href="#">Email</a>
-          <a class="btn btn--ghost" id="deckLink3" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
-        </div>
-
-        <p class="muted small">© <span id="year"></span> BLACK TIGER AUDIO</p>
-      </div>
-    </section>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="footer">
+    <div class="container">
+      <div class="row" style="justify-content:space-between">
+        <div>
+          <div style="font-family:Impact,Haettenschweiler,'Arial Black',sans-serif; letter-spacing:.6px; text-transform:uppercase">BLACK TIGER AUDIO</div>
+          <div class="muted">Автозвук • усилители • честные характеристики</div>
+        </div>
+        <div class="row">
+          <a id="tgBtn2" class="btn sm" href="#">Telegram</a>
+          <a class="btn sm ghost" href="invest/">Инвесторам</a>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="small">© <span id="year"></span> BLACK TIGER AUDIO. Информация на сайте не является публичной офертой.</div>
+    </div>
+  </footer>
+
+  <div id="imgModal" class="modal" aria-hidden="true">
+    <button class="close" aria-label="Закрыть">×</button>
+    <img src="" alt="" />
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="js/site.js"></script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+{
+  "updated": "2026-01-29",
+  "brand": {
+    "name": "BLACK TIGER AUDIO",
+    "tagline": "Инвест-страница бренда BLACK TIGER AUDIO",
+    "mission": "Мы строим честный автозвук: подтверждённые продажи, рост за счёт оборотки и расширения линейки.",
+    "links": {
+      "deck": "deck.pdf",
+      "telegram_channel": "https://t.me/blacktiger_audio",
+      "telegram_contact": "https://t.me/blacktiger_support",
+      "email": "mailto:hello@blacktigeraudio.ru"
+    }
+  },
+  "metrics": {
+    "delivered": "—",
+    "gmv": "—",
+    "payout": "—",
+    "rating": "WB/Ozon: 4.9★"
+  },
+  "ask": {
+    "amount": "—",
+    "use": "Оборотка под следующую партию и расширение ассортимента."
+  }
+}
