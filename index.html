@@ -62,37 +62,67 @@
           <h1 class="h1">Честный автозвук<br/>для людей, которые слышат разницу.</h1>
           <p class="lead" data-bind="brand.tagline">Техника, что рвёт тишину.</p>
 
-          <div class="kpi-grid">
-            <div class="kpi">
-              <div class="kpi__label">Заказы (маркетплейсы)</div>
-              <div class="kpi__value"><span data-bind="total_metrics.orders_total" data-format="int">—</span> шт</div>
-              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
-            </div>
-            <div class="kpi">
-              <div class="kpi__label">Доставлено (маркетплейсы)</div>
-              <div class="kpi__value"><span data-bind="total_metrics.orders_delivered" data-format="int">—</span> шт</div>
-              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
-            </div>
-            <div class="kpi">
-              <div class="kpi__label">GMV (маркетплейсы)</div>
-              <div class="kpi__value"><span data-bind="total_metrics.gmv_rub" data-format="rub">—</span></div>
-              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
-            </div>
-            <div class="kpi">
-              <div class="kpi__label">Выплата</div>
-              <div class="kpi__value"><span data-bind="total_metrics.payout_rub" data-format="rub">—</span></div>
-              <div class="kpi__hint"><span data-bind="total_metrics.market_note">Ozon</span></div>
-            </div>
-            <div class="kpi">
-              <div class="kpi__label">Рейтинг (Ozon)</div>
-              <div class="kpi__value"><span data-bind="metrics.rating" data-format="stars">—</span></div>
-              <div class="kpi__hint"><span data-bind="metrics.reviews_total" data-format="int">—</span> отзывов</div>
+          <div class="market-kpis">
+            <div class="market">
+              <div class="market__head">
+                <div class="market__title">Ozon</div>
+                <div class="market__meta"><span data-bind="metrics.rating" data-format="stars">—</span> · <span data-bind="metrics.reviews_total" data-format="int">—</span> отзывов</div>
+              </div>
+
+              <div class="kpi-grid">
+                <div class="kpi">
+                  <div class="kpi__label">Заказы (всего)</div>
+                  <div class="kpi__value"><span data-bind="metrics.orders_total" data-format="int">—</span> шт</div>
+                  <div class="kpi__hint">включая отмены</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__label">Доставлено</div>
+                  <div class="kpi__value"><span data-bind="metrics.orders_delivered" data-format="int">—</span> шт</div>
+                  <div class="kpi__hint">фактически получено</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__label">GMV (факт)</div>
+                  <div class="kpi__value"><span data-bind="metrics.gmv_rub" data-format="rub">—</span></div>
+                  <div class="kpi__hint">по доставленным заказам</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__label">Выплата</div>
+                  <div class="kpi__value"><span data-bind="metrics.payout_rub" data-format="rub">—</span></div>
+                  <div class="kpi__hint">после комиссий/логистики</div>
+                </div>
+              </div>
             </div>
 
-            <div class="kpi">
-              <div class="kpi__label">Рейтинг (WB)</div>
-              <div class="kpi__value"><span data-bind="wb_metrics.rating" data-format="stars">—</span></div>
-              <div class="kpi__hint">
+            <div class="market">
+              <div class="market__head">
+                <div class="market__title">Wildberries</div>
+                <div class="market__meta"><span data-bind="wb_metrics.rating" data-format="stars">—</span> · <span data-bind="wb_metrics.reviews_total" data-format="int">—</span> отзывов</div>
+              </div>
+
+              <div class="kpi-grid">
+                <div class="kpi">
+                  <div class="kpi__label">Заказано</div>
+                  <div class="kpi__value"><span data-bind="wb_metrics.orders_total" data-format="int">—</span> шт</div>
+                  <div class="kpi__hint">в периоде отчёта</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__label">Выкуплено</div>
+                  <div class="kpi__value"><span data-bind="wb_metrics.orders_delivered" data-format="int">—</span> шт</div>
+                  <div class="kpi__hint">покупки (без возвратов)</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__label">GMV (факт)</div>
+                  <div class="kpi__value"><span data-bind="wb_metrics.gmv_rub" data-format="rub">—</span></div>
+                  <div class="kpi__hint">заказы − комиссия WB</div>
+                </div>
+                <div class="kpi">
+                  <div class="kpi__label">К перечислению</div>
+                  <div class="kpi__value"><span data-bind="wb_metrics.payout_rub" data-format="rub">—</span></div>
+                  <div class="kpi__hint">по данным WB</div>
+                </div>
+              </div>
+
+              <div class="market__hint">
                 GALE <span data-bind="wb_metrics.sku_ratings.GALE_3800W.rating" data-format="float1">—</span>
                 (<span data-bind="wb_metrics.sku_ratings.GALE_3800W.reviews" data-format="int">—</span>) ·
                 STORM <span data-bind="wb_metrics.sku_ratings.STORM_5800W.rating" data-format="float1">—</span>
@@ -100,16 +130,10 @@
               </div>
             </div>
 
-            <div class="kpi">
-              <div class="kpi__label">Отзывы (WB)</div>
-              <div class="kpi__value"><span data-bind="wb_metrics.reviews_total" data-format="int">—</span></div>
-              <div class="kpi__hint">2 SKU (GALE + STORM)</div>
-            </div>
-
-            <div class="kpi kpi--accent">
+            <div class="kpi kpi--accent market-kpis__logistics">
               <div class="kpi__label">Логистика</div>
               <div class="kpi__value">$<span data-bind="metrics.logistics_usd_per_kg_new" data-format="float1">—</span>/кг</div>
-              <div class="kpi__hint">было $<span data-bind="metrics.logistics_usd_per_kg_old" data-format="float1">—</span>/кг</div>
+              <div class="kpi__hint">было $<span data-bind="metrics.logistics_usd_per_kg_old" data-format="float1">—</span>/кг · есть оффер $<span data-bind="metrics.logistics_usd_per_kg_offer" data-format="float1">—</span>/кг</div>
             </div>
           </div>
 
@@ -228,7 +252,7 @@
               data-bind="wb_metrics.sku_ratings.STORM_5800W.reviews"
               data-format="int"
               >—</span
-            >). Продажи/выплаты WB — добавим после выгрузки.
+            >). Заказы/выкупы/выплаты — из выгрузки WB.
           </p>
         </div>
 
@@ -294,7 +318,7 @@
       <div class="container">
         <div class="section__head">
           <h2 class="h2">Юнит‑экономика</h2>
-          <p class="muted">Средние значения по факту (Ozon). WB добавим при выгрузке (чтобы цифры бились «тут и там»).</p>
+          <p class="muted">Средние значения по факту (Ozon). WB считаем отдельно — цифры бьются по выгрузкам «тут и там».</p>
         </div>
 
         <div class="grid2">
@@ -370,21 +394,25 @@
 
         <div class="why-grid">
           <div class="why card">
+              <div class="card-bg"></div>
             <div class="why__icon"><img src="assets/icons/shield-check.svg" alt="" /></div>
             <div class="why__title">Честные спеки</div>
             <div class="why__text">Если написано 5800W — это не “маркетинговые ватты”.</div>
           </div>
           <div class="why card">
+              <div class="card-bg"></div>
             <div class="why__icon"><img src="assets/icons/handshake.svg" alt="" /></div>
             <div class="why__title">Сервис</div>
             <div class="why__text">Отвечаем быстро, объясняем подключение и настройку.</div>
           </div>
           <div class="why card">
+              <div class="card-bg"></div>
             <div class="why__icon"><img src="assets/icons/chart.svg" alt="" /></div>
             <div class="why__title">Данные</div>
             <div class="why__text">Считаем: маржу, ДРР, оборачиваемость, воронки.</div>
           </div>
           <div class="why card">
+              <div class="card-bg"></div>
             <div class="why__icon"><img src="assets/icons/chip.svg" alt="" /></div>
             <div class="why__title">Сложнее со временем</div>
             <div class="why__text">Переходим от усилителей к более “умным” компонентам и связкам.</div>
@@ -399,6 +427,7 @@
 
           <div class="roadmap__grid">
             <div class="road card">
+              <div class="road-bg"></div>
               <div class="road__top">
                 <div class="road__badge">сейчас</div>
                 <img src="assets/icons/amplifier.svg" alt="" />
@@ -412,6 +441,7 @@
             </div>
 
             <div class="road card">
+              <div class="road-bg"></div>
               <div class="road__top">
                 <div class="road__badge">0–3 месяца</div>
                 <img src="assets/icons/store.svg" alt="" />
@@ -425,6 +455,7 @@
             </div>
 
             <div class="road card">
+              <div class="road-bg"></div>
               <div class="road__top">
                 <div class="road__badge">3–12 месяцев</div>
                 <img src="assets/icons/chart.svg" alt="" />
@@ -438,6 +469,7 @@
             </div>
 
             <div class="road card">
+              <div class="road-bg"></div>
               <div class="road__top">
                 <div class="road__badge">1–3 года</div>
                 <img src="assets/icons/chip.svg" alt="" />
@@ -464,6 +496,7 @@
 
         <div class="terms-grid">
           <div class="term card">
+              <div class="term-bg"></div>
             <div class="term__badge">A</div>
             <div class="term__title">Товарная партия</div>
             <div class="term__text">Инвестиции под закупку следующей партии. Быстрый оборот и понятный контроль.</div>
@@ -475,6 +508,7 @@
           </div>
 
           <div class="term card term--best">
+            <div class="term-bg"></div>
             <div class="term__badge">B</div>
             <div class="term__title">Рост линейки</div>
             <div class="term__text">Финансирование расширения SKU + маркетинга. Лучший рычаг роста.</div>
@@ -486,6 +520,7 @@
           </div>
 
           <div class="term card">
+              <div class="term-bg"></div>
             <div class="term__badge">C</div>
             <div class="term__title">Стратегический партнёр</div>
             <div class="term__text">Под более крупный рост: дистрибуция, производство, R&D «умных» устройств.</div>

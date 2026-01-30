@@ -229,6 +229,56 @@ a:hover{color:white}
   font-size:11px;
 }
 
+/* --- Marketplace KPI blocks (Ozon / Wildberries) --- */
+.market-kpis{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.market{
+  background:var(--panel);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius: var(--radius);
+  padding:14px;
+  box-shadow: var(--shadow);
+}
+.market__head{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+.market__title{
+  font-weight:800;
+  letter-spacing:.02em;
+}
+.market__meta{
+  color:var(--muted);
+  font-size:12px;
+  white-space:nowrap;
+}
+.market .kpi-grid{
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap:10px;
+}
+.market .kpi{
+  background:rgba(255,255,255,.02);
+  border-color:rgba(255,255,255,.06);
+  box-shadow:none;
+  padding:12px 12px 10px;
+}
+.market .kpi__value{font-size:20px}
+.market__hint{
+  margin-top:10px;
+  color:var(--muted2);
+  font-size:12px;
+}
+.market-kpis__logistics{
+  grid-column: 1 / -1;
+}
+
 .hero__actions{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -574,6 +624,7 @@ a:hover{color:white}
   .hero__visual{min-height: 280px}
   .hero__visual img{right:-80px; top:-20px; width:min(760px, 120%); opacity:.55}
   .kpi-grid{grid-template-columns: repeat(2, minmax(0,1fr))}
+  .market-kpis{grid-template-columns:1fr}
   .hero__actions{grid-template-columns:1fr}
   .grid2{grid-template-columns:1fr}
   .why-grid{grid-template-columns:repeat(2, minmax(0,1fr))}
@@ -586,6 +637,7 @@ a:hover{color:white}
   .container{width:calc(100% - 30px)}
   .h1{font-size:40px}
   .kpi-grid{grid-template-columns:1fr}
+  .market .kpi-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .roadmap__grid{grid-template-columns:1fr}
   .footer{flex-direction:column; gap:8px; align-items:flex-start}
@@ -600,7 +652,7 @@ a:hover{color:white}
   border-radius: inherit;
   background-size: cover;
   background-position: center;
-  opacity: .32;
+  opacity: .58;
   filter: saturate(1.25) contrast(1.08);
   pointer-events: none;
   z-index: 0;
