@@ -31,7 +31,7 @@ body{
   position:fixed;
   inset:0;
   background-image:url("assets/noise.png");
-  opacity:.10;
+  opacity:.06;
   mix-blend-mode:overlay;
   pointer-events:none;
   z-index:0;
@@ -162,15 +162,15 @@ a:hover{color:white}
   z-index:1;
 }
 .hero__visual img{
-  -webkit-mask-image: radial-gradient(circle at 55% 50%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
-  mask-image: radial-gradient(circle at 55% 50%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
+  -webkit-mask-image: radial-gradient(circle at 62% 45%, rgba(0,0,0,1) 52%, rgba(0,0,0,0) 92%);
+  mask-image: radial-gradient(circle at 62% 45%, rgba(0,0,0,1) 52%, rgba(0,0,0,0) 92%);
 
   position:absolute;
   right:-120px;
   top:-40px;
   width:min(880px, 110%);
   max-width:none;
-  opacity:.85;
+  opacity:.92;
   filter: drop-shadow(0 60px 120px rgba(255,102,0,.12)) drop-shadow(0 60px 120px rgba(0,0,0,.55));
   pointer-events:none;
 }
@@ -322,8 +322,8 @@ a:hover{color:white}
   background:
     radial-gradient(900px 520px at 12% 40%, rgba(255,102,0,.10), transparent 60%),
     radial-gradient(900px 520px at 90% 60%, rgba(255,102,0,.08), transparent 60%);
-  border-top:1px solid rgba(255,255,255,.05);
-  border-bottom:1px solid rgba(255,255,255,.05);
+  border-top:0;
+  border-bottom:0;
 }
 .section__head{
   display:flex;
@@ -651,8 +651,8 @@ right:-80px; top:-20px; width:min(760px, 120%); opacity:.55}
   background:
     radial-gradient(900px 520px at 12% 40%, rgba(255,102,0,.10), rgba(0,0,0,0) 60%),
     radial-gradient(900px 520px at 90% 60%, rgba(255,102,0,.08), rgba(0,0,0,0) 60%);
-  border-top:1px solid rgba(255,255,255,.05);
-  border-bottom:1px solid rgba(255,255,255,.05);
+  border-top:0;
+  border-bottom:0;
 }
 
 .section--alt::before{
@@ -698,35 +698,37 @@ right:-80px; top:-20px; width:min(760px, 120%); opacity:.55}
   background-size: 1400px auto;
   pointer-events:none;
   z-index:1;
-  opacity:.55;
+  opacity:.42;
   mix-blend-mode: screen;
-  filter: saturate(1.15) contrast(1.05);
+  filter: saturate(1.08) contrast(1.02);
+  -webkit-mask-image: radial-gradient(ellipse at 50% 50%, #000 0 55%, transparent 88%);
+  mask-image: radial-gradient(ellipse at 50% 50%, #000 0 55%, transparent 88%);
 }
 #home.section::before{
-  background-image:url("assets/bg/spot-traction.png");
-  background-position: 90% 35%;
-  background-size: 1200px auto;
-  opacity:.65;
+  background-image:url("assets/bg/spot-hero.png");
+  background-position:85% 30%;
+  background-size:1700px auto;
+  opacity:.50;
 }
 #traction.section::before{
   background-image:url("assets/bg/spot-traction.png");
-  background-position: 8% 20%;
-  opacity:.50;
+  background-position:12% 12%;
+  opacity:.46;
 }
 #unit.section::before{
   background-image:url("assets/bg/spot-unit.png");
-  background-position: 92% 28%;
-  opacity:.48;
+  background-position:88% 45%;
+  opacity:.38;
 }
 #strategy.section::before{
   background-image:url("assets/bg/spot-strategy.png");
-  background-position: 12% 55%;
-  opacity:.42;
+  background-position:10% 58%;
+  opacity:.36;
 }
 #terms.section::before{
-  background-image:url("assets/bg/spot-unit.png");
-  background-position: 80% 60%;
-  opacity:.30;
+  background-image:url("assets/bg/spot-terms.png");
+  background-position:86% 55%;
+  opacity:.32;
 }
 
 
