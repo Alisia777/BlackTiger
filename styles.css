@@ -44,6 +44,8 @@ body{
   z-index:1;
 }
 
+.section .container{position:relative; z-index:2}
+
 a{color:inherit; text-decoration:none}
 a:hover{color:white}
 
@@ -153,11 +155,16 @@ a:hover{color:white}
 }
 .hero__content{position:relative; z-index:2;}
 .hero__visual{
+  isolation:isolate;
+
   position:relative;
   min-height: 520px;
   z-index:1;
 }
 .hero__visual img{
+  -webkit-mask-image: radial-gradient(circle at 55% 50%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
+  mask-image: radial-gradient(circle at 55% 50%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
+
   position:absolute;
   right:-120px;
   top:-40px;
@@ -308,6 +315,8 @@ a:hover{color:white}
 
 .section{
   padding:74px 0;
+  position: relative;
+  overflow: hidden;
 }
 .section--alt{
   background:
@@ -581,51 +590,17 @@ a:hover{color:white}
 .sep{opacity:.5; margin:0 6px}
 
 
-/* --- Extra "wow": subtle smoke + tiger watermark --- */
-.section--alt{
-  background-image:
-    url("assets/smoke-orange.png"),
-    url("assets/smoke-orange.png"),
-    radial-gradient(900px 520px at 12% 40%, rgba(255,102,0,.10), transparent 60%),
-    radial-gradient(900px 520px at 90% 60%, rgba(255,102,0,.08), transparent 60%);
-  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;
-  background-position: -260px 40%, 90% 65%, 0 0, 0 0;
-  background-size: 820px 820px, 760px 760px, auto, auto;
-}
-.roadmap{
-  position:relative;
-}
-.roadmap:before{
-  content:"";
-  position:absolute;
-  right:-160px;
-  bottom:-220px;
-  width:520px;
-  height:520px;
-  background:url("assets/tiger-head.png") no-repeat center/contain;
-  opacity:.07;
-  filter: drop-shadow(0 40px 90px rgba(255,102,0,.10));
-  pointer-events:none;
-}
-.roadmap:after{
-  content:"";
-  position:absolute;
-  left:-260px;
-  top:-180px;
-  width:720px;
-  height:720px;
-  background: radial-gradient(circle at 35% 35%, rgba(255,102,0,.22), rgba(255,102,0,0) 62%);
-  opacity:.18;
-  filter: blur(18px);
-  pointer-events:none;
-  z-index:0;
-}
 
 @media (max-width: 980px){
   .nav{display:none}
   .hero__grid{grid-template-columns:1fr}
-  .hero__visual{min-height: 280px}
-  .hero__visual img{right:-80px; top:-20px; width:min(760px, 120%); opacity:.55}
+  .hero__visual{
+  isolation:isolate;
+min-height: 280px}
+  .hero__visual img{
+  -webkit-mask-image: radial-gradient(circle at 55% 50%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
+  mask-image: radial-gradient(circle at 55% 50%, rgba(0,0,0,1) 58%, rgba(0,0,0,0) 80%);
+right:-80px; top:-20px; width:min(760px, 120%); opacity:.55}
   .kpi-grid{grid-template-columns: repeat(2, minmax(0,1fr))}
   .market-kpis{grid-template-columns:1fr}
   .hero__actions{grid-template-columns:1fr}
@@ -712,3 +687,59 @@ a:hover{color:white}
 .term--b .term-bg{ background-image: url("assets/terms/terms-b.png"); }
 .term--c .term-bg{ background-image: url("assets/terms/terms-c.png"); }
 
+
+
+/* --- Large background illustrations (section "spots") --- */
+.section::before{
+  content:"";
+  position:absolute;
+  inset:-35% -20%;
+  background-repeat:no-repeat;
+  background-size: 1400px auto;
+  pointer-events:none;
+  z-index:1;
+  opacity:.55;
+  mix-blend-mode: screen;
+  filter: saturate(1.15) contrast(1.05);
+}
+#home.section::before{
+  background-image:url("assets/bg/spot-traction.png");
+  background-position: 90% 35%;
+  background-size: 1200px auto;
+  opacity:.65;
+}
+#traction.section::before{
+  background-image:url("assets/bg/spot-traction.png");
+  background-position: 8% 20%;
+  opacity:.50;
+}
+#unit.section::before{
+  background-image:url("assets/bg/spot-unit.png");
+  background-position: 92% 28%;
+  opacity:.48;
+}
+#strategy.section::before{
+  background-image:url("assets/bg/spot-strategy.png");
+  background-position: 12% 55%;
+  opacity:.42;
+}
+#terms.section::before{
+  background-image:url("assets/bg/spot-unit.png");
+  background-position: 80% 60%;
+  opacity:.30;
+}
+
+
+/* hero visual halo to hide hard edges */
+.hero__visual:before{
+  content:"";
+  position:absolute;
+  inset:-30% -20%;
+  background: radial-gradient(circle at 60% 45%, rgba(255,102,0,.22), rgba(255,102,0,0) 62%),
+              radial-gradient(circle at 70% 60%, rgba(255,178,0,.12), rgba(255,178,0,0) 68%);
+  filter: blur(14px);
+  opacity:.70;
+  pointer-events:none;
+  z-index:0;
+  mix-blend-mode: screen;
+}

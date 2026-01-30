@@ -249,16 +249,12 @@ def generate_teaser_pdf(out_path: Path, data: dict) -> None:
         fill_color=panel,
     )
 
-    c.setFillColor(text)
-    c.setFont("DejaVu-Bold", 10.5)
-    c.drawString(x_margin + 12, footer_y + 12 * mm, "Контакты для инвесторов:")
-
     telegram = data.get("contacts", {}).get("telegram_handle", "@Hardlivers")
     email = data.get("contacts", {}).get("email", "S@artyuhin.ru")
 
     c.setFillColor(muted)
     c.setFont("DejaVu", 10.5)
-    c.drawString(x_margin + 150, footer_y + 12 * mm, f"Telegram: {telegram}   •   Email: {email}")
+    c.drawString(x_margin + 12, footer_y + 12 * mm, f"Контакты: Telegram: {telegram}   •   Email: {email}")
 
     c.showPage()
     c.save()
