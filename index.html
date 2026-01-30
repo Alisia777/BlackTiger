@@ -2,596 +2,389 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#0B0B0B" />
-  <title>BLACK TIGER AUDIO — Investor snapshot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BLACK TIGER AUDIO — честный автозвук</title>
+  <meta name="description" content="BLACK TIGER AUDIO: усилители Storm 5800W и Gale 3800W. Официальные ссылки на Wildberries и Ozon, инструкции, сравнение и отзывы покупателей." />
+  <meta name="theme-color" content="#0b0b0d" />
 
-  <meta name="description" content="BLACK TIGER AUDIO — честный автозвук с traction и управляемой юнит‑экономикой. Investor snapshot." />
-  <meta property="og:title" content="BLACK TIGER AUDIO — Investor snapshot" />
-  <meta property="og:description" content="Факты вместо обещаний: продажи, отзывы, юнит‑экономика, план масштабирования." />
-  <meta property="og:type" content="website" />
-
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <link rel="icon" href="assets/tiger-head.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <div class="bg-noise" aria-hidden="true"></div>
-
   <header class="topbar">
     <div class="container topbar__inner">
-      <a class="brand" href="#top" aria-label="BLACK TIGER AUDIO">
-        <img class="brand__mark" src="assets/tiger-head.png" alt="" />
-        <div class="brand__text">
-          <div class="brand__name">BLACK TIGER AUDIO</div>
-          <div class="brand__sub">Investor snapshot</div>
-        </div>
+      <a class="brand" href="#top">
+        <img class="brand__mark" src="assets/tiger-head.png" alt="Black Tiger" />
+        <span class="brand__text">BLACK TIGER AUDIO</span>
       </a>
 
       <nav class="nav">
-        <a href="#traction">Traction</a>
-        <a href="#economics">Юнит‑экономика</a>
-        <a href="#strategy">Стратегия</a>
-        <a href="#terms">Условия</a>
-        <a href="#contact">Контакт</a>
+        <a href="#products">Усилители</a>
+        <a href="#comparison">Сравнение</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#manuals">Инструкции</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Контакты</a>
       </nav>
 
       <div class="topbar__cta">
-        <a class="btn btn--ghost" data-link="links.deck_pdf" href="deck.pdf" target="_blank" rel="noopener">Deck (PDF)</a>
-        <a class="btn" data-link="contacts.telegram_url" href="https://t.me/Hardlivers" target="_blank" rel="noopener">Написать</a>
+        <a class="btn btn--ghost" href="#products">Выбрать усилитель</a>
       </div>
     </div>
   </header>
 
   <main id="top">
+    <!-- HERO -->
     <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__content">
-          <div class="pill">
-            <span class="dot"></span>
-            Обновлено: <span data-bind="updated_at">—</span>
-          </div>
-
-          <h1 class="h1">Честный автозвук<br/>для людей, которые слышат разницу.</h1>
-          <p class="lead" data-bind="brand.tagline">Техника, что рвёт тишину.</p>
-
-          <div class="market-kpis">
-            <div class="market">
-              <div class="market__head">
-                <div class="market__title">Ozon</div>
-                <div class="market__meta"><span data-bind="metrics.rating" data-format="stars">—</span> · <span data-bind="metrics.reviews_total" data-format="int">—</span> отзывов</div>
-              </div>
-
-              <div class="kpi-grid">
-                <div class="kpi">
-                  <div class="kpi__label">Заказы (всего)</div>
-                  <div class="kpi__value"><span data-bind="metrics.orders_total" data-format="int">—</span> шт</div>
-                  <div class="kpi__hint">включая отмены</div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi__label">Доставлено</div>
-                  <div class="kpi__value"><span data-bind="metrics.orders_delivered" data-format="int">—</span> шт</div>
-                  <div class="kpi__hint">фактически получено</div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi__label">GMV (факт)</div>
-                  <div class="kpi__value"><span data-bind="metrics.gmv_rub" data-format="rub">—</span></div>
-                  <div class="kpi__hint">по доставленным заказам</div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi__label">Выплата</div>
-                  <div class="kpi__value"><span data-bind="metrics.payout_rub" data-format="rub">—</span></div>
-                  <div class="kpi__hint">после комиссий/логистики</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="market">
-              <div class="market__head">
-                <div class="market__title">Wildberries</div>
-                <div class="market__meta"><span data-bind="wb_metrics.rating" data-format="stars">—</span> · <span data-bind="wb_metrics.reviews_total" data-format="int">—</span> отзывов</div>
-              </div>
-
-              <div class="kpi-grid">
-                <div class="kpi">
-                  <div class="kpi__label">Заказано</div>
-                  <div class="kpi__value"><span data-bind="wb_metrics.orders_total" data-format="int">—</span> шт</div>
-                  <div class="kpi__hint">в периоде отчёта</div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi__label">Выкуплено</div>
-                  <div class="kpi__value"><span data-bind="wb_metrics.orders_delivered" data-format="int">—</span> шт</div>
-                  <div class="kpi__hint">покупки (без возвратов)</div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi__label">GMV (факт)</div>
-                  <div class="kpi__value"><span data-bind="wb_metrics.gmv_rub" data-format="rub">—</span></div>
-                  <div class="kpi__hint">заказы − комиссия WB</div>
-                </div>
-                <div class="kpi">
-                  <div class="kpi__label">К перечислению</div>
-                  <div class="kpi__value"><span data-bind="wb_metrics.payout_rub" data-format="rub">—</span></div>
-                  <div class="kpi__hint">по данным WB</div>
-                </div>
-              </div>
-
-              <div class="market__hint">
-                GALE <span data-bind="wb_metrics.sku_ratings.GALE_3800W.rating" data-format="float1">—</span>
-                (<span data-bind="wb_metrics.sku_ratings.GALE_3800W.reviews" data-format="int">—</span>) ·
-                STORM <span data-bind="wb_metrics.sku_ratings.STORM_5800W.rating" data-format="float1">—</span>
-                (<span data-bind="wb_metrics.sku_ratings.STORM_5800W.reviews" data-format="int">—</span>)
-              </div>
-            </div>
-
-            <div class="kpi kpi--accent market-kpis__logistics">
-              <div class="kpi__label">Логистика</div>
-              <div class="kpi__value">$<span data-bind="metrics.logistics_usd_per_kg_new" data-format="float1">—</span>/кг</div>
-              <div class="kpi__hint">было $<span data-bind="metrics.logistics_usd_per_kg_old" data-format="float1">—</span>/кг · есть оффер $<span data-bind="metrics.logistics_usd_per_kg_offer" data-format="float1">—</span>/кг</div>
-            </div>
-          </div>
+          <div class="pill">Официальные карточки на маркетплейсах</div>
+          <h1>Честный автозвук<br/>для людей, которые<br/>слышат разницу.</h1>
+          <p class="lead">Storm 5800W и Gale 3800W — два усилителя под разные системы. Без «маркетинговой магии»: понятный выбор, инструкции, отзывы покупателей и поддержка.</p>
 
           <div class="hero__actions">
-            <a class="btn btn--xl" data-link="contacts.telegram_url" href="https://t.me/Hardlivers" target="_blank" rel="noopener">
-              Запросить условия
-              <span class="btn__sub">Telegram: <span data-bind="contacts.telegram_handle">@Hardlivers</span></span>
-            </a>
-            <a class="btn btn--xl btn--ghost" data-link="links.deck_pdf" href="deck.pdf" target="_blank" rel="noopener">
-              Deck (PDF, тизер)
-              <span class="btn__sub">1 страница‑тизер — полная версия по запросу</span>
-            </a>
+            <a class="btn btn--primary" href="#products">Смотреть усилители</a>
+            <a class="btn btn--ghost" href="#reviews">Отзывы</a>
           </div>
 
-          <div class="proof">
-            <div class="proof__item">
-              <img src="assets/icons/shield-check.svg" alt="" />
-              <div>
-                <div class="proof__title">Честные характеристики</div>
-                <div class="proof__text">Без “маркетинговой магии”.</div>
-              </div>
+          <div class="hero__trust">
+            <div class="trust">
+              <div class="trust__title">Покупка</div>
+              <div class="trust__text">Wildberries / Ozon</div>
             </div>
-            <div class="proof__item">
-              <img src="assets/icons/bolt.svg" alt="" />
-              <div>
-                <div class="proof__title">Поддержка 24/7</div>
-                <div class="proof__text">Помогаем с подключением/настройкой.</div>
-              </div>
+            <div class="trust">
+              <div class="trust__title">Инструкции</div>
+              <div class="trust__text">Gale / Storm (PDF)</div>
             </div>
-            <div class="proof__item">
-              <img src="assets/icons/chart.svg" alt="" />
-              <div>
-                <div class="proof__title">Факты вместо обещаний</div>
-                <div class="proof__text">Считаем маржу, ДРР, оборачиваемость.</div>
-              </div>
+            <div class="trust">
+              <div class="trust__title">Поможем</div>
+              <div class="trust__text">подключение / настройка</div>
             </div>
           </div>
         </div>
 
         <div class="hero__visual" aria-hidden="true">
-          <img src="assets/hero-illus-feather.png" alt="" />
+          <div class="visual-card visual-card--storm">
+            <img src="assets/products/storm.png" alt="Storm 5800W" loading="eager" />
+          </div>
+          <div class="visual-card visual-card--gale">
+            <img src="assets/products/gale.png" alt="Gale 3800W" loading="eager" />
+          </div>
+          <div class="visual-glow" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <section id="traction" class="section">
+    <!-- PRODUCTS -->
+    <section id="products" class="section">
       <div class="container">
         <div class="section__head">
-          <h2 class="h2">Traction</h2>
-          <p class="muted">Ozon + WB. Графики/отзывы — из кабинетов маркетплейсов.</p>
+          <h2>Усилители</h2>
+          <p>Выберите под вашу задачу: фронт/саб, 2 канала или универсальная 4/3/2‑канальная схема.</p>
         </div>
 
-        <div class="grid2">
-          <div class="card card--chart">
-            <div class="card__title">
-              <img src="assets/icons/chart.svg" alt="" />
-              Динамика доставок (Ozon)
-            </div>
-            <a class="chartLink" href="assets/traction-ozon.png" target="_blank" rel="noopener">
-              <img class="chart" src="assets/traction-ozon.png" alt="График доставок (Ozon)" />
-            </a>
-            <div class="card__hint">Период: 01.12–29.01. Фильтр: только доставленные заказы.</div>
-          </div>
-
-          <div class="card">
-            <div class="card__title">
-              <img src="assets/icons/handshake.svg" alt="" />
-              Пример отзывов (Ozon)
-            </div>
-
-            <div class="quote">
-              <div class="quote__stars">★★★★★</div>
-              <div class="quote__text">«Товар, впечатляюще превосходный, лучше него я не слушал ничего»</div>
-              <div class="quote__meta">Storm 5800W • январь</div>
-            </div>
-
-            <div class="quote">
-              <div class="quote__stars">★★★★★</div>
-              <div class="quote__text">«Пришёл в рабочем состоянии! Установил — качество хорошее.»</div>
-              <div class="quote__meta">Gale 3800W • январь</div>
-            </div>
-
-            <div class="quote">
-              <div class="quote__stars">★★★★★</div>
-              <div class="quote__text">«Спасибо продавцу, всё пришло хорошо упаковано — работает отлично.»</div>
-              <div class="quote__meta">Gale 3800W • декабрь</div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="mini-kpis">
+        <div class="product-grid">
+          <!-- STORM -->
+          <article class="product">
+            <div class="product__top">
               <div>
-                <div class="mini-kpis__label">Рейтинг</div>
-                <div class="mini-kpis__value"><span data-bind="metrics.rating" data-format="stars">—</span></div>
+                <h3>Storm 5800W</h3>
+                <div class="product__meta">4/3/2‑канальный усилитель</div>
               </div>
-              <div>
-                <div class="mini-kpis__label">Всего отзывов</div>
-                <div class="mini-kpis__value"><span data-bind="metrics.reviews_total" data-format="int">—</span></div>
-              </div>
-              <div>
-                <div class="mini-kpis__label">Доставлено</div>
-                <div class="mini-kpis__value"><span data-bind="metrics.orders_delivered" data-format="int">—</span> шт</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="subhead">
-          <h3 class="h3">Wildberries (WB)</h3>
-          <p class="muted small">
-            Рейтинг по SKU: GALE <span data-bind="wb_metrics.sku_ratings.GALE_3800W.rating" data-format="float1">—</span> (<span
-              data-bind="wb_metrics.sku_ratings.GALE_3800W.reviews"
-              data-format="int"
-              >—</span
-            >), STORM <span data-bind="wb_metrics.sku_ratings.STORM_5800W.rating" data-format="float1">—</span> (<span
-              data-bind="wb_metrics.sku_ratings.STORM_5800W.reviews"
-              data-format="int"
-              >—</span
-            >). Заказы/выкупы/выплаты — из выгрузки WB.
-          </p>
-        </div>
-
-        <div class="grid2">
-          <div class="card card--chart">
-            <div class="card__title">
-              <img src="assets/icons/chart.svg" alt="" />
-              Динамика выкупов (WB)
-            </div>
-            <a class="chartLink" href="assets/traction-wb.png" target="_blank" rel="noopener">
-              <img class="chart" src="assets/traction-wb.png" alt="График выкупов по дням (WB)" />
-            </a>
-            <div class="card__hint">Источник: WB Partners. Период: 01.12–29.01. Метрика: выкупы (накопительно).</div>
-          </div>
-
-          <div class="card">
-            <div class="card__title">
-              <img src="assets/icons/handshake.svg" alt="" />
-              Пример отзывов (WB)
+              <span class="badge badge--accent">универсальный</span>
             </div>
 
-            <div class="quote">
-              <div class="quote__stars">★★★★★</div>
-              <div class="quote__text">«Советую этот усилитель — по мощности понравился.»</div>
-              <div class="quote__meta">Gale 3800W • WB</div>
+            <div class="product__media">
+              <img src="assets/products/storm.png" alt="Black Tiger Audio Storm 5800W" loading="lazy" />
             </div>
 
-            <div class="quote">
-              <div class="quote__stars">★★★★★</div>
-              <div class="quote__text">«Красивый дизайн, компактный! Классный, маленький — мне хватает!»</div>
-              <div class="quote__meta">Gale 3800W • WB</div>
-            </div>
-
-            <div class="quote">
-              <div class="quote__stars">★★★★★</div>
-              <div class="quote__text">«Все отлично. Минусов нет. Работает нормально.»</div>
-              <div class="quote__meta">Gale 3800W • WB</div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="mini-kpis">
-              <div>
-                <div class="mini-kpis__label">Рейтинг</div>
-                <div class="mini-kpis__value"><span data-bind="wb_metrics.rating" data-format="stars">—</span></div>
-              </div>
-              <div>
-                <div class="mini-kpis__label">Всего отзывов</div>
-                <div class="mini-kpis__value"><span data-bind="wb_metrics.reviews_total" data-format="int">—</span></div>
-              </div>
-              <div>
-                <div class="mini-kpis__label">SKU</div>
-                <div class="mini-kpis__value">2 (GALE / STORM)</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="economics" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Юнит‑экономика</h2>
-          <p class="muted">Средние значения по факту (Ozon). WB считаем отдельно — цифры бьются по выгрузкам «тут и там».</p>
-        </div>
-
-        <div class="grid2">
-          <div class="card">
-            <div class="card__title">
-              <img src="assets/icons/amplifier.svg" alt="" />
-              Storm 5800W • 4‑канальный • AB
-            </div>
-            <div class="stats">
-<div class="stat">
-                <div class="stat__label">Выплата (net)</div>
-                <div class="stat__value"><span data-bind="unit_economics.STORM_5800W.avg_payout_rub">—</span> ₽</div>
-              </div>
-              <div class="stat">
-                <div class="stat__label">Закупка (COGS)</div>
-                <div class="stat__value"><span data-bind="unit_economics.STORM_5800W.cogs_rub">—</span> ₽</div>
-              </div>
-              <div class="stat stat--accent">
-                <div class="stat__label">Вклад в маржу</div>
-                <div class="stat__value"><span data-bind="unit_economics.STORM_5800W.gross_profit_rub">—</span> ₽</div>
-              </div>
-            </div>
-            <div class="card__hint">Доставка 16 шт • среднее на 01.12–29.01</div>
-          </div>
-
-          <div class="card">
-            <div class="card__title">
-              <img src="assets/icons/amplifier.svg" alt="" />
-              Gale 3800W • 2‑канальный • AB
-            </div>
-            <div class="stats">
-<div class="stat">
-                <div class="stat__label">Выплата (net)</div>
-                <div class="stat__value"><span data-bind="unit_economics.GALE_3800W.avg_payout_rub">—</span> ₽</div>
-              </div>
-              <div class="stat">
-                <div class="stat__label">Закупка (COGS)</div>
-                <div class="stat__value"><span data-bind="unit_economics.GALE_3800W.cogs_rub">—</span> ₽</div>
-              </div>
-              <div class="stat stat--accent">
-                <div class="stat__label">Вклад в маржу</div>
-                <div class="stat__value"><span data-bind="unit_economics.GALE_3800W.gross_profit_rub">—</span> ₽</div>
-              </div>
-            </div>
-            <div class="card__hint">Доставка 13 шт • среднее на 01.12–29.01</div>
-          </div>
-        </div>
-
-        <div class="callout">
-          <img src="assets/icons/truck.svg" alt="" />
-          <div>
-            <div class="callout__title">Логистика — уже оптимизирована</div>
-            <div class="callout__text">Снижение ставки с <b>$<span data-bind="metrics.logistics_usd_per_kg_old">8.9</span>/кг</b> до <b>$<span data-bind="metrics.logistics_usd_per_kg_new">3.3</span>/кг</b> — рост запаса по марже и возможность масштабировать партии.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="strategy" class="section">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Стратегия бренда</h2>
-          <p class="muted">Авто‑товары → умные компоненты → экосистема. Делаем доступное без потери качества.</p>
-        </div>
-
-        <div class="why-grid">
-          <div class="why card card--honest">
-              <div class="card-bg"></div>
-            <div class="why__icon"><img src="assets/icons/shield-check.svg" alt="" /></div>
-            <div class="why__title">Честные спеки</div>
-            <div class="why__text">Если написано 5800W — это не “маркетинговые ватты”.</div>
-          </div>
-          <div class="why card card--service">
-              <div class="card-bg"></div>
-            <div class="why__icon"><img src="assets/icons/handshake.svg" alt="" /></div>
-            <div class="why__title">Сервис</div>
-            <div class="why__text">Отвечаем быстро, объясняем подключение и настройку.</div>
-          </div>
-          <div class="why card card--data">
-              <div class="card-bg"></div>
-            <div class="why__icon"><img src="assets/icons/chart.svg" alt="" /></div>
-            <div class="why__title">Данные</div>
-            <div class="why__text">Считаем: маржу, ДРР, оборачиваемость, воронки.</div>
-          </div>
-          <div class="why card card--complexity">
-              <div class="card-bg"></div>
-            <div class="why__icon"><img src="assets/icons/chip.svg" alt="" /></div>
-            <div class="why__title">Сложнее со временем</div>
-            <div class="why__text">Переходим от усилителей к более “умным” компонентам и связкам.</div>
-          </div>
-        </div>
-
-        <div class="roadmap">
-          <div class="roadmap__head">
-            <h3 class="h3">Roadmap</h3>
-            <p class="muted">Каждый этап — отдельный «удар лапой»: новый SKU, контроль качества, масштаб.</p>
-          </div>
-
-          <div class="roadmap__grid">
-            <div class="road card road--now">
-              <div class="road-bg"></div>
-              <div class="road__top">
-                <div class="road__badge">сейчас</div>
-                <img src="assets/icons/amplifier.svg" alt="" />
-              </div>
-              <div class="road__title">Усилители: Storm / Gale</div>
-              <ul class="road__list">
-                <li>Стабилизация поставок</li>
-                <li>Рост отзывов и повторных заказов</li>
-                <li>Оптимизация логистики</li>
-              </ul>
-            </div>
-
-            <div class="road card road--0-3">
-              <div class="road-bg"></div>
-              <div class="road__top">
-                <div class="road__badge">0–3 месяца</div>
-                <img src="assets/icons/store.svg" alt="" />
-              </div>
-              <div class="road__title">Расширение линейки</div>
-              <ul class="road__list">
-                <li>Сабы / акустика / кабели</li>
-                <li>Упаковка и бренд‑контроль</li>
-                <li>Контент + отзывы</li>
-              </ul>
-            </div>
-
-            <div class="road card road--3-12">
-              <div class="road-bg"></div>
-              <div class="road__top">
-                <div class="road__badge">3–12 месяцев</div>
-                <img src="assets/icons/chart.svg" alt="" />
-              </div>
-              <div class="road__title">Масштабирование каналов</div>
-              <ul class="road__list">
-                <li>WB / Ozon / D2C</li>
-                <li>Партнёрства и дистрибуция</li>
-                <li>Системный маркетинг</li>
-              </ul>
-            </div>
-
-            <div class="road card road--1-3">
-              <div class="road-bg"></div>
-              <div class="road__top">
-                <div class="road__badge">1–3 года</div>
-                <img src="assets/icons/chip.svg" alt="" />
-              </div>
-              <div class="road__title">Умная авто‑электроника</div>
-              <ul class="road__list">
-                <li>Магнитолы / компоненты</li>
-                <li>Интеграции и экосистема</li>
-                <li>Рост LTV, новый класс маржи</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="terms" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2 class="h2">Условия</h2>
-          <p class="muted">Ниже — варианты, которые можно обсуждать. Точные цифры — в термшите по запросу.</p>
-        </div>
-
-        <div class="terms-grid">
-          <div class="term card term--a">
-              <div class="term-bg"></div>
-            <div class="term__badge">A</div>
-            <div class="term__title">Товарная партия</div>
-            <div class="term__text">Инвестиции под закупку следующей партии. Быстрый оборот и понятный контроль.</div>
-            <ul class="term__list">
-              <li>Срок: 30–90 дней</li>
-              <li>Отчётность по продажам</li>
-              <li>Условия: % от чистой прибыли</li>
+            <ul class="bullets">
+              <li>Когда нужно «одним усилителем закрыть систему».</li>
+              <li>Фронт + тыл или фронт + саб (3‑канальная схема).</li>
+              <li>Ставка на контроль, запас и стабильность.</li>
             </ul>
-          </div>
 
-          <div class="term card term--best term--b">
-            <div class="term-bg"></div>
-            <div class="term__badge">B</div>
-            <div class="term__title">Рост линейки</div>
-            <div class="term__text">Финансирование расширения SKU + маркетинга. Лучший рычаг роста.</div>
-            <ul class="term__list">
-              <li>Срок: 6–12 месяцев</li>
-              <li>Фокус: новые SKU + контент</li>
-              <li>Условия: revenue share / опцион</li>
-            </ul>
-          </div>
+            <div class="cta-row">
+              <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-4-5800-vt-3139066863/?oos_search=false&prev_collection=163371609" target="_blank" rel="noopener">Купить на Ozon</a>
+              <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/636038071/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Купить на WB</a>
+            </div>
 
-          <div class="term card term--c">
-              <div class="term-bg"></div>
-            <div class="term__badge">C</div>
-            <div class="term__title">Стратегический партнёр</div>
-            <div class="term__text">Под более крупный рост: дистрибуция, производство, R&D «умных» устройств.</div>
-            <ul class="term__list">
-              <li>Срок: 1–3 года</li>
-              <li>Роль: сеть / экспертиза</li>
-              <li>Условия: доля / совместное юрлицо</li>
+            <div class="subactions">
+              <a class="link" href="assets/manuals/Manual_STORM_5800W.pdf" target="_blank" rel="noopener">Инструкция Storm (PDF)</a>
+              <a class="link" href="#comparison">Сравнить с Gale</a>
+            </div>
+          </article>
+
+          <!-- GALE -->
+          <article class="product">
+            <div class="product__top">
+              <div>
+                <h3>Gale 3800W</h3>
+                <div class="product__meta">2‑канальный усилитель</div>
+              </div>
+              <span class="badge badge--accent">точный контроль</span>
+            </div>
+
+            <div class="product__media">
+              <img src="assets/products/gale.png" alt="Black Tiger Audio Gale 3800W" loading="lazy" />
+            </div>
+
+            <ul class="bullets">
+              <li>Фронт / мидбас / компонентка — когда важна «собранность».</li>
+              <li>Можно использовать в мост (см. инструкцию).</li>
+              <li>Компактно, понятно, без лишнего.</li>
             </ul>
-          </div>
+
+            <div class="cta-row">
+              <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-2-3800-vt-3210383821/" target="_blank" rel="noopener">Купить на Ozon</a>
+              <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/689777164/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Купить на WB</a>
+            </div>
+
+            <div class="subactions">
+              <a class="link" href="assets/manuals/Manual_GALE_3800W.pdf" target="_blank" rel="noopener">Инструкция Gale (PDF)</a>
+              <a class="link" href="#comparison">Сравнить со Storm</a>
+            </div>
+          </article>
         </div>
 
         <div class="note">
-          Информация на странице не является публичной офертой. Детали обсуждаются индивидуально.
+          <strong>Важно:</strong> ссылки ведут на официальные карточки. Цены и акции на маркетплейсах меняются ежедневно — на сайте мы показываем только продукт и смысл.
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- COMPARISON -->
+    <section id="comparison" class="section section--alt">
       <div class="container">
-        <div class="contact card">
-          <div class="contact__left">
-            <h2 class="h2">Контакт</h2>
-            <p class="muted">Если тебе нравится подход «считать и делать» — напиши. Вышлю подробный deck и термшит.</p>
+        <div class="section__head">
+          <h2>Сравнение</h2>
+          <p>Быстрое решение «что брать» без лишней теории.</p>
+        </div>
 
-            <div class="contact__actions">
-              <a class="btn btn--xl" data-link="contacts.telegram_url" href="https://t.me/Hardlivers" target="_blank" rel="noopener">
-                Написать в Telegram
-                <span class="btn__sub"><span data-bind="contacts.telegram_handle">@Hardlivers</span></span>
-              </a>
-              <a class="btn btn--xl btn--ghost" data-link="contacts.email_url" href="mailto:S@artyuhin.ru">
-                Написать на email
-                <span class="btn__sub"><span data-bind="contacts.email">S@artyuhin.ru</span></span>
-              </a>
-            </div>
+        <div class="compare">
+          <div class="compare__card">
+            <h3>Gale 3800W</h3>
+            <ul class="bullets">
+              <li><strong>2 канала</strong> — для фронта / мидбаса / точного контроля.</li>
+              <li><strong>Проще настроить</strong> и быстрее получить результат.</li>
+              <li><strong>Если система небольшая</strong> и важна собранность.</li>
+            </ul>
           </div>
+          <div class="compare__card compare__card--accent">
+            <h3>Storm 5800W</h3>
+            <ul class="bullets">
+              <li><strong>4/3/2 канала</strong> — гибкость схем (в т.ч. фронт + саб).</li>
+              <li><strong>Универсальный выбор</strong> «на вырост».</li>
+              <li><strong>Если нужно больше каналов</strong> и больше вариантов сборки.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="contact__right">
-            <div class="contact__badge">
-              <img src="assets/tiger-head.png" alt="" />
-              <div>
-                <div class="contact__brand">BLACK TIGER AUDIO</div>
-                <div class="contact__small">Автозвук • маркетплейсы • бренд</div>
-              </div>
-            </div>
+    <!-- REVIEWS -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Отзывы покупателей</h2>
+          <p>Ниже — короткие цитаты. Полные отзывы смотрите в карточках Wildberries и Ozon.</p>
+        </div>
 
-            <div class="contact__meta">
-              <div class="meta">
-                <div class="meta__label">Фокус</div>
-                <div class="meta__value">Автозвук / авто‑электроника / “smart” устройства</div>
-              </div>
-              <div class="meta">
-                <div class="meta__label">Опыт</div>
-                <div class="meta__value">Авто‑товары с 2010 года • маркетплейсы • Китай/логистика</div>
-              </div>
-              <div class="meta">
-                <div class="meta__label">Принцип</div>
-                <div class="meta__value">Честно перед клиентом — поэтому люди возвращаются</div>
-              </div>
+        <div class="ratings">
+          <div class="rating">
+            <div class="rating__top">
+              <span class="platform platform--ozon">Ozon</span>
+              <span class="stars">★★★★★</span>
             </div>
+            <div class="rating__value">4.9</div>
+            <div class="rating__meta">оценка по отзывам покупателей</div>
+          </div>
+          <div class="rating">
+            <div class="rating__top">
+              <span class="platform platform--wb">Wildberries</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <div class="rating__value">4.8</div>
+            <div class="rating__meta">оценка по отзывам покупателей</div>
           </div>
         </div>
 
-        <footer class="footer">
-          <div class="footer__left">
-            © <span id="year"></span> BLACK TIGER AUDIO
-          </div>
-          <div class="footer__right">
-            <a data-link="contacts.telegram_url" href="https://t.me/Hardlivers" target="_blank" rel="noopener">Telegram</a>
-            <span class="sep">•</span>
-            <a data-link="contacts.email_url" href="mailto:S@artyuhin.ru">Email</a>
-            <span class="sep">•</span>
-            <a data-link="links.deck_pdf" href="deck.pdf" target="_blank" rel="noopener">Deck PDF</a>
-          </div>
-        </footer>
+        <div class="review-grid">
+          <article class="review">
+            <div class="review__top">
+              <span class="platform platform--ozon">Ozon</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <p>«Товар, впечатляюще превосходный, лучше него я не слышал ничего.»</p>
+            <div class="review__meta">Storm 5800W</div>
+          </article>
 
+          <article class="review">
+            <div class="review__top">
+              <span class="platform platform--ozon">Ozon</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <p>«Пришёл в рабочем состоянии. Установил — качество хорошее.»</p>
+            <div class="review__meta">Gale 3800W</div>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <span class="platform platform--ozon">Ozon</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <p>«Спасибо продавцу, всё пришло хорошо упаковано — работает отлично.»</p>
+            <div class="review__meta">Gale 3800W</div>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <span class="platform platform--wb">Wildberries</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <p>«Все отлично. Минусов нет. Работает нормально.»</p>
+            <div class="review__meta">Gale / Storm</div>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <span class="platform platform--wb">Wildberries</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <p>«Красивый дизайн, компактный. Классный.»</p>
+            <div class="review__meta">Gale 3800W</div>
+          </article>
+
+          <article class="review">
+            <div class="review__top">
+              <span class="platform platform--wb">Wildberries</span>
+              <span class="stars">★★★★★</span>
+            </div>
+            <p>«По мощности понравился. Буду собирать систему дальше.»</p>
+            <div class="review__meta">Storm 5800W</div>
+          </article>
+        </div>
+
+        <div class="cta-wide">
+          <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-4-5800-vt-3139066863/?oos_search=false&prev_collection=163371609" target="_blank" rel="noopener">Открыть Storm на Ozon</a>
+          <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/636038071/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Открыть Storm на WB</a>
+          <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-2-3800-vt-3210383821/" target="_blank" rel="noopener">Открыть Gale на Ozon</a>
+          <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/689777164/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Открыть Gale на WB</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANUALS -->
+    <section id="manuals" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Инструкции и подключение</h2>
+          <p>Внутри: схема, мост, фильтры и базовые рекомендации. Если нужно — подскажем в Telegram.</p>
+        </div>
+
+        <div class="manual-grid">
+          <div class="manual">
+            <div class="manual__title">Инструкция GALE 3800W</div>
+            <div class="manual__meta">PDF • RU/EN</div>
+            <a class="btn btn--primary" href="assets/manuals/Manual_GALE_3800W.pdf" target="_blank" rel="noopener">Скачать PDF</a>
+          </div>
+          <div class="manual">
+            <div class="manual__title">Инструкция STORM 5800W</div>
+            <div class="manual__meta">PDF • RU/EN</div>
+            <a class="btn btn--primary" href="assets/manuals/Manual_STORM_5800W.pdf" target="_blank" rel="noopener">Скачать PDF</a>
+          </div>
+        </div>
+
+        <div class="howto">
+          <h3>Кому подойдёт</h3>
+          <div class="howto__grid">
+            <div class="howto__card">
+              <h4>Если вы хотите «просто чтобы звучало хорошо»</h4>
+              <p>Берите Gale 3800W на фронт или мидбас. Быстро настраивается, даёт «собранность» и понятный контроль.</p>
+            </div>
+            <div class="howto__card">
+              <h4>Если вы собираете систему и думаете на вырост</h4>
+              <p>Storm 5800W — гибкость по каналам (4/3/2) и больше вариантов сборки. Удобно, когда система растёт.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>FAQ</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Где купить и почему нет цены на сайте?</summary>
+            <p>Мы продаём через маркетплейсы. Цены и акции меняются ежедневно (СПП, промо, скидки), поэтому на сайте оставляем только ссылки на официальные карточки.</p>
+          </details>
+          <details>
+            <summary>Подскажете с подключением и настройкой?</summary>
+            <p>Да. Напишите в Telegram — поможем подобрать схему, подсказать по мосту и базовым настройкам фильтров. Инструкции (PDF) доступны выше.</p>
+          </details>
+          <details>
+            <summary>Чем отличаются Gale и Storm в двух словах?</summary>
+            <p>Gale — 2 канала и «точный контроль» на фронт/мидбас. Storm — 4/3/2 канала и «универсальность» под разные сборки.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact">
+      <div class="container contact">
+        <div>
+          <h2>Контакты</h2>
+          <p>Если нравится подход «считать и делать» — напишите. Подскажу, что лучше под вашу систему и помогу с настройкой.</p>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="https://t.me/Hardlivers" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="btn btn--ghost" href="mailto:S@artyuhin.ru">Написать на email</a>
+          </div>
+        </div>
+
+        <div class="contact__card">
+          <div class="contact__brand">
+            <img src="assets/tiger-head.png" alt="" />
+            <div>
+              <div class="contact__brand-title">BLACK TIGER AUDIO</div>
+              <div class="contact__brand-sub">Усилители • честные спеки • поддержка</div>
+            </div>
+          </div>
+
+          <div class="contact__rows">
+            <div class="contact__row"><span>Telegram</span><strong>@Hardlivers</strong></div>
+            <div class="contact__row"><span>Email</span><strong>S@artyuhin.ru</strong></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container footer__inner">
+          <span>© BLACK TIGER AUDIO</span>
+          <span class="muted">Информация на странице не является публичной офертой.</span>
+        </div>
       </div>
     </section>
   </main>
 
-  <script src="app.js"></script>
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const el = document.querySelector(href);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
 </html>
