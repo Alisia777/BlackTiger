@@ -590,3 +590,49 @@ a:hover{color:white}
   .roadmap__grid{grid-template-columns:1fr}
   .footer{flex-direction:column; gap:8px; align-items:flex-start}
 }
+
+/* --- Visual upgrades: background illustrations in cards --- */
+.card, .road, .term { overflow: hidden; }
+
+.card-bg, .road-bg, .term-bg{
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+  opacity: .32;
+  filter: saturate(1.25) contrast(1.08);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.card > *:not(.card-bg):not(.road-bg):not(.term-bg),
+.road > *:not(.road-bg),
+.term > *:not(.term-bg){
+  position: relative;
+  z-index: 1;
+}
+
+/* Make the orange “подложка” much softer */
+.section--alt{
+  position: relative;
+  overflow: hidden;
+  background-image: none;
+}
+
+.section--alt::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("assets/smoke-orange.png"), url("assets/smoke-orange.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 620px 620px;
+  background-position: -100px 30px, calc(100% + 100px) 30px;
+  opacity: .12;
+  pointer-events: none;
+}
+
+.section--alt > .container{
+  position: relative;
+  z-index: 1;
+}
