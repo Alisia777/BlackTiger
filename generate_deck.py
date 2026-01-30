@@ -96,6 +96,14 @@ def generate_teaser_pdf(out_path: Path, data: dict) -> None:
     header_h = 18 * mm
     c.setFillColor(orange)
     c.rect(0, H - header_h, W, header_h, stroke=0, fill=1)
+
+    # Tiger mark in the header (brand)
+    try:
+        tiger = ImageReader('assets/tiger-head.png')
+        c.drawImage(tiger, W-20*mm, H-header_h+3*mm, width=12*mm, height=12*mm, mask='auto')
+    except Exception:
+        pass
+
     c.setFillColor(HexColor("#000000"))
     c.setFont("DejaVu-Bold", 13)
     c.drawCentredString(W / 2, H - header_h / 2 - 4, "BLACK TIGER AUDIO")

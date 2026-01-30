@@ -652,7 +652,7 @@ a:hover{color:white}
   border-radius: inherit;
   background-size: cover;
   background-position: center;
-  opacity: .58;
+  opacity: .78;
   filter: saturate(1.25) contrast(1.08);
   pointer-events: none;
   z-index: 0;
@@ -678,9 +678,10 @@ a:hover{color:white}
   inset: 0;
   background-image: url("assets/smoke-orange.png"), url("assets/smoke-orange.png");
   background-repeat: no-repeat, no-repeat;
-  background-size: 620px 620px;
+  background-size: 760px 760px;
   background-position: -100px 30px, calc(100% + 100px) 30px;
-  opacity: .12;
+  opacity: .06;
+  filter: blur(10px);
   pointer-events: none;
 }
 
