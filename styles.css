@@ -75,7 +75,7 @@ a:hover{color:white}
   opacity:.95;
 }
 .brand__name{
-  font-family:Anton, Montserrat, sans-serif;
+  font-family: var(--font-display);
   letter-spacing:.06em;
   font-size:14px;
 }
@@ -185,7 +185,7 @@ a:hover{color:white}
 }
 
 .h1{
-  font-family:Anton, sans-serif;
+  font-family: var(--font-display);
   font-size:52px;
   line-height:1.02;
   letter-spacing:.02em;
@@ -333,13 +333,13 @@ a:hover{color:white}
 }
 .section__subhead .muted{margin:0; max-width: 780px;}
 .h2{
-  font-family:Anton, sans-serif;
+  font-family: var(--font-display);
   font-size:34px;
   letter-spacing:.02em;
   margin:0;
 }
 .h3{
-  font-family:Anton, sans-serif;
+  font-family: var(--font-display);
   font-size:26px;
   letter-spacing:.02em;
   margin:0;
@@ -363,9 +363,10 @@ a:hover{color:white}
     radial-gradient(420px 220px at 10% 10%, rgba(255,102,0,.16), transparent 60%),
     radial-gradient(520px 260px at 90% 10%, rgba(255,102,0,.10), transparent 60%);
   opacity:.55;
+  z-index:1;
   pointer-events:none;
 }
-.card > *{position:relative; z-index:1}
+.card > *{position:relative; z-index:2}
 
 .card__title{
   display:flex;
@@ -555,7 +556,7 @@ a:hover{color:white}
   background:rgba(0,0,0,.22);
 }
 .contact__badge img{width:38px;height:38px;object-fit:contain}
-.contact__brand{font-family:Anton, sans-serif; letter-spacing:.06em}
+.contact__brand{font-family: var(--font-display); letter-spacing:.06em}
 .contact__small{color:var(--muted2); font-size:12px; margin-top:2px}
 .contact__meta{margin-top:12px; display:flex; flex-direction:column; gap:10px}
 .meta{
@@ -609,13 +610,15 @@ a:hover{color:white}
 .roadmap:after{
   content:"";
   position:absolute;
-  left:-220px;
-  top:-120px;
-  width:620px;
-  height:620px;
-  background:url("assets/smoke-orange.png") no-repeat center/contain;
-  opacity:.22;
+  left:-260px;
+  top:-180px;
+  width:720px;
+  height:720px;
+  background: radial-gradient(circle at 35% 35%, rgba(255,102,0,.22), rgba(255,102,0,0) 62%);
+  opacity:.18;
+  filter: blur(18px);
   pointer-events:none;
+  z-index:0;
 }
 
 @media (max-width: 980px){
@@ -652,8 +655,9 @@ a:hover{color:white}
   border-radius: inherit;
   background-size: cover;
   background-position: center;
-  opacity: .78;
-  filter: saturate(1.25) contrast(1.08);
+  opacity: .56;
+  filter: saturate(1.15) contrast(1.06);
+  mix-blend-mode: screen;
   pointer-events: none;
   z-index: 0;
 }
@@ -662,30 +666,49 @@ a:hover{color:white}
 .road > *:not(.road-bg),
 .term > *:not(.term-bg){
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Make the orange “подложка” much softer */
+/* --- Section background (subtle, no harsh orange blocks) --- */
 .section--alt{
   position: relative;
   overflow: hidden;
-  background-image: none;
+  background:
+    radial-gradient(900px 520px at 12% 40%, rgba(255,102,0,.10), rgba(0,0,0,0) 60%),
+    radial-gradient(900px 520px at 90% 60%, rgba(255,102,0,.08), rgba(0,0,0,0) 60%);
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 .section--alt::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("assets/smoke-orange.png"), url("assets/smoke-orange.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 760px 760px;
-  background-position: -100px 30px, calc(100% + 100px) 30px;
-  opacity: .06;
-  filter: blur(10px);
-  pointer-events: none;
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: url("assets/noise.png");
+  opacity:.12;
+  mix-blend-mode: overlay;
+  pointer-events:none;
 }
 
 .section--alt > .container{
-  position: relative;
-  z-index: 1;
+  position:relative;
+  z-index:1;
 }
+
+
+
+/* --- Illustration mapping --- */
+.card--honest .card-bg{ background-image: url("assets/pillars/pillar-honest.png"); }
+.card--service .card-bg{ background-image: url("assets/pillars/pillar-service.png"); }
+.card--data .card-bg{ background-image: url("assets/pillars/pillar-data.png"); }
+.card--complexity .card-bg{ background-image: url("assets/pillars/pillar-complexity.png"); }
+
+.road--now .road-bg{ background-image: url("assets/roadmap/roadmap-now.png"); }
+.road--0-3 .road-bg{ background-image: url("assets/roadmap/roadmap-0-3.png"); }
+.road--3-12 .road-bg{ background-image: url("assets/roadmap/roadmap-3-12.png"); }
+.road--1-3 .road-bg{ background-image: url("assets/roadmap/roadmap-1-3.png"); }
+
+.term--a .term-bg{ background-image: url("assets/terms/terms-a.png"); }
+.term--b .term-bg{ background-image: url("assets/terms/terms-b.png"); }
+.term--c .term-bg{ background-image: url("assets/terms/terms-c.png"); }
+
