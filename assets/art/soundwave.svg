@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF8A2A" stop-opacity="0"/>
+      <stop offset="0.18" stop-color="#FF8A2A" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#FF8A2A" stop-opacity="0.55"/>
+      <stop offset="0.82" stop-color="#FF8A2A" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FF8A2A" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="b" x="-10%" y="-50%" width="120%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- soft wave stack -->
+  <g filter="url(#b)" opacity="0.6">
+    <path d="M0 330 C 120 260, 240 400, 360 330 C 480 260, 600 400, 720 330 C 840 260, 960 400, 1080 330 C 1200 260, 1320 400, 1440 330 C 1520 290, 1560 310, 1600 330" stroke="url(#g)" stroke-width="4" fill="none"/>
+    <path d="M0 300 C 120 240, 240 360, 360 300 C 480 240, 600 360, 720 300 C 840 240, 960 360, 1080 300 C 1200 240, 1320 360, 1440 300 C 1520 260, 1560 280, 1600 300" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85"/>
+    <path d="M0 360 C 120 300, 240 420, 360 360 C 480 300, 600 420, 720 360 C 840 300, 960 420, 1080 360 C 1200 300, 1320 420, 1440 360 C 1520 320, 1560 340, 1600 360" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.75"/>
+  </g>
+
+  <!-- crisp core line -->
+  <path d="M0 330 C 120 260, 240 400, 360 330 C 480 260, 600 400, 720 330 C 840 260, 960 400, 1080 330 C 1200 260, 1320 400, 1440 330 C 1520 290, 1560 310, 1600 330" stroke="url(#g)" stroke-width="1.2" fill="none" opacity="0.9"/>
+</svg>

@@ -1,34 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BLACK TIGER AUDIO — честный автозвук</title>
-  <meta name="description" content="BLACK TIGER AUDIO: усилители Storm 5800W и Gale 3800W. Официальные ссылки на Wildberries и Ozon, инструкции, сравнение и отзывы покупателей." />
-  <meta name="theme-color" content="#0b0b0d" />
-
-  <link rel="icon" href="assets/tiger-head.png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLACK TIGER AUDIO — усилители Storm 5800W и Gale 3800W</title>
+  <meta name="description" content="Честные характеристики, аккуратный звук, поддержка по подключению. Усилители BLACK TIGER AUDIO: Storm 5800W (4/3/2 канала) и Gale 3800W (2 канала)." />
+  <meta name="theme-color" content="#0B0B0D" />
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="BLACK TIGER AUDIO — Storm 5800W и Gale 3800W" />
+  <meta property="og:description" content="Честные характеристики. Чистый звук. Поддержка по подключению в Telegram." />
+  <meta property="og:image" content="assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar__inner">
-      <a class="brand" href="#top">
-        <img class="brand__mark" src="assets/tiger-head.png" alt="Black Tiger" />
-        <span class="brand__text">BLACK TIGER AUDIO</span>
+  <div class="bg">
+    <div class="bg__noise"></div>
+    <div class="bg__vignette"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__brand" aria-label="На главную">
+        <img src="assets/brand/tiger_mark.png" alt="" class="nav__logo-img" />
+        <span class="nav__logo-text">BLACK TIGER AUDIO</span>
       </a>
 
-      <nav class="nav">
-        <a href="#products">Усилители</a>
-        <a href="#comparison">Сравнение</a>
+      <nav class="nav__links" aria-label="Навигация">
+        <a href="#amps">Усилители</a>
+        <a href="#compare">Сравнение</a>
         <a href="#reviews">Отзывы</a>
         <a href="#manuals">Инструкции</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact">Контакты</a>
+        <a href="#group">Группа</a>
       </nav>
 
-      <div class="topbar__cta">
-        <a class="btn btn--ghost" href="#products">Выбрать усилитель</a>
+      <div class="nav__actions">
+        <a class="btn btn--ghost" href="#amps">Выбрать усилитель</a>
+        <a class="btn btn--primary" href="#group">Поддержка</a>
       </div>
     </div>
   </header>
@@ -36,241 +51,273 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="container hero__grid">
-        <div class="hero__content">
-          <div class="pill">Официальные карточки на маркетплейсах</div>
-          <h1>Честный автозвук<br/>для людей, которые<br/>слышат разницу.</h1>
-          <p class="lead">Storm 5800W и Gale 3800W — два усилителя под разные системы. Без «маркетинговой магии»: понятный выбор, инструкции, отзывы покупателей и поддержка.</p>
+      <div class="hero__art" aria-hidden="true">
+        <div class="hero__art-sparks"></div>
+        <img src="assets/tiger-head.png" alt="" class="hero__tiger" />
+      </div>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="#products">Смотреть усилители</a>
-            <a class="btn btn--ghost" href="#reviews">Отзывы</a>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="pill">
+            <span class="dot"></span>
+            Автозвук • усилители • поддержка в Telegram
           </div>
 
-          <div class="hero__trust">
-            <div class="trust">
-              <div class="trust__title">Покупка</div>
-              <div class="trust__text">Wildberries / Ozon</div>
+          <h1>Чистый звук<br/>без «маркетинговой магии».</h1>
+          <p class="lead">
+            Два усилителя под разные задачи: <b>Storm 5800W</b> (4/3/2 канала) и <b>Gale 3800W</b> (2 канала).
+            Честные характеристики, понятное подключение, помощь в группе.
+          </p>
+
+          <div class="hero__bullets">
+            <div class="mini">
+              <div class="mini__title">Для кого</div>
+              <div class="mini__text">Для тех, кто <b>слышит разницу</b>: фронт стал чище, бас — собраннее.</div>
             </div>
-            <div class="trust">
-              <div class="trust__title">Инструкции</div>
-              <div class="trust__text">Gale / Storm (PDF)</div>
+            <div class="mini">
+              <div class="mini__title">Зачем</div>
+              <div class="mini__text">Чтобы «штатка» перестала быть узким местом и система <b>заиграла</b>.</div>
             </div>
-            <div class="trust">
-              <div class="trust__title">Поможем</div>
-              <div class="trust__text">подключение / настройка</div>
+            <div class="mini">
+              <div class="mini__title">Почему мы</div>
+              <div class="mini__text">Характеристики как в инструкции + <b>поддержка</b> по настройке.</div>
             </div>
+          </div>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#amps">Смотреть усилители</a>
+            <a class="btn btn--ghost" href="#reviews">Читать отзывы</a>
+          </div>
+
+          <div class="hero__note">
+            * Цены на маркетплейсах меняются. На сайте — без цен, только факты и выбор.
           </div>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="visual-card visual-card--storm">
-            <img src="assets/products/storm.png" alt="Storm 5800W" loading="eager" />
+        <div class="hero__cards">
+          <div class="card card--glass">
+            <div class="card__icon">⚡</div>
+            <div class="card__title">Подбор «по задаче»</div>
+            <div class="card__text">Фронт/тыл, фронт+саб, универсальные схемы — подскажем.</div>
           </div>
-          <div class="visual-card visual-card--gale">
-            <img src="assets/products/gale.png" alt="Gale 3800W" loading="eager" />
+          <div class="card card--glass">
+            <div class="card__icon">🛠️</div>
+            <div class="card__title">Помощь по подключению</div>
+            <div class="card__text">В группе: схемы, настройки gain/фильтров, типовые ошибки.</div>
           </div>
-          <div class="visual-glow" aria-hidden="true"></div>
+          <div class="card card--glass">
+            <div class="card__icon">✅</div>
+            <div class="card__title">Честные спеки</div>
+            <div class="card__text">RMS / мост / чувствительность — из инструкции, без фантазий.</div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PRODUCTS -->
-    <section id="products" class="section">
+    <!-- AMPS -->
+    <section id="amps" class="section section--art">
+      <div class="section__art section__art--blueprint" aria-hidden="true"></div>
+
       <div class="container">
         <div class="section__head">
           <h2>Усилители</h2>
-          <p>Выберите под вашу задачу: фронт/саб, 2 канала или универсальная 4/3/2‑канальная схема.</p>
+          <p class="muted">
+            Два SKU — два понятных сценария. Ниже: одинаковая структура характеристик, выбор площадки и инструкция.
+          </p>
         </div>
 
-        <div class="product-grid">
+        <div class="products">
           <!-- STORM -->
-          <article class="product">
-            <div class="product__top">
-              <div>
-                <h3>Storm 5800W</h3>
-                <div class="product__meta">4/3/2‑канальный усилитель</div>
+          <article class="product product--storm" id="storm">
+            <div class="product__media frame">
+              <img src="assets/products/storm_cut.png" alt="BLACK TIGER AUDIO Storm 5800W" />
+              <div class="badge">Storm 5800W</div>
+            </div>
+
+            <div class="product__body">
+              <h3>Storm 5800W</h3>
+              <p class="product__sub">4/3/2‑канальный усилитель • универсальный для фронта/тыла и несложных систем.</p>
+
+              <div class="specgrid">
+                <div class="spec"><span>RMS @ 4Ω</span><b>60W × 4</b></div>
+                <div class="spec"><span>RMS @ 2Ω</span><b>80W × 4</b></div>
+                <div class="spec"><span>Bridge @ 4Ω</span><b>160W × 2</b></div>
+                <div class="spec"><span>THD</span><b>&lt; 0.15%</b></div>
+                <div class="spec"><span>Диапазон частот</span><b>10Hz–30kHz</b></div>
+                <div class="spec"><span>S/N</span><b>&gt; 90dB</b></div>
+                <div class="spec"><span>Чувствительность</span><b>200mV–8V</b></div>
+                <div class="spec"><span>Предохранитель</span><b>25A × 2</b></div>
               </div>
-              <span class="badge badge--accent">универсальный</span>
-            </div>
 
-            <div class="product__media">
-              <img src="assets/products/storm.png" alt="Black Tiger Audio Storm 5800W" loading="lazy" />
-            </div>
+              <div class="buyrow">
+                <div class="buyrow__title">Купить Storm 5800W</div>
+                <div class="buyrow__buttons">
+                  <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-4-5800-vt-3139066863/?oos_search=false&prev_collection=163371609" target="_blank" rel="noopener">Ozon</a>
+                  <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/636038071/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Wildberries</a>
+                  <a class="btn btn--ghost" href="assets/manuals/Manual_STORM_5800W.pdf" target="_blank" rel="noopener">Инструкция PDF</a>
+                </div>
+              </div>
 
-            <ul class="bullets">
-              <li>Когда нужно «одним усилителем закрыть систему».</li>
-              <li>Фронт + тыл или фронт + саб (3‑канальная схема).</li>
-              <li>Ставка на контроль, запас и стабильность.</li>
-            </ul>
-
-            <div class="cta-row">
-              <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-4-5800-vt-3139066863/?oos_search=false&prev_collection=163371609" target="_blank" rel="noopener">Купить на Ozon</a>
-              <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/636038071/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Купить на WB</a>
-            </div>
-
-            <div class="subactions">
-              <a class="link" href="assets/manuals/Manual_STORM_5800W.pdf" target="_blank" rel="noopener">Инструкция Storm (PDF)</a>
-              <a class="link" href="#comparison">Сравнить с Gale</a>
+              <ul class="usecases">
+                <li><b>Фронт + тыл</b> — один усилитель закрывает базовую систему.</li>
+                <li><b>Громче и чище</b> без «песка» на ВЧ при корректной настройке.</li>
+                <li>Подходит, если нужен <b>универсальный</b> вариант «поставил и поехал».</li>
+              </ul>
             </div>
           </article>
 
           <!-- GALE -->
-          <article class="product">
-            <div class="product__top">
-              <div>
-                <h3>Gale 3800W</h3>
-                <div class="product__meta">2‑канальный усилитель</div>
+          <article class="product product--gale" id="gale">
+            <div class="product__media frame">
+              <img src="assets/products/gale_cut.png" alt="BLACK TIGER AUDIO Gale 3800W" />
+              <div class="badge">Gale 3800W</div>
+            </div>
+
+            <div class="product__body">
+              <h3>Gale 3800W</h3>
+              <p class="product__sub">2‑канальный усилитель • когда нужен «честный фронт» или мост на саб.</p>
+
+              <div class="specgrid">
+                <div class="spec"><span>RMS @ 4Ω</span><b>80W × 2</b></div>
+                <div class="spec"><span>RMS @ 2Ω</span><b>160W × 2</b></div>
+                <div class="spec"><span>Bridge @ 4Ω</span><b>160W × 1</b></div>
+                <div class="spec"><span>THD</span><b>&lt; 0.2%</b></div>
+                <div class="spec"><span>Диапазон частот</span><b>20Hz–20kHz</b></div>
+                <div class="spec"><span>S/N</span><b>&gt; 95dB</b></div>
+                <div class="spec"><span>Чувствительность</span><b>150mV–8V</b></div>
+                <div class="spec"><span>Предохранитель</span><b>25A × 1</b></div>
               </div>
-              <span class="badge badge--accent">точный контроль</span>
-            </div>
 
-            <div class="product__media">
-              <img src="assets/products/gale.png" alt="Black Tiger Audio Gale 3800W" loading="lazy" />
-            </div>
+              <div class="buyrow">
+                <div class="buyrow__title">Купить Gale 3800W</div>
+                <div class="buyrow__buttons">
+                  <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-2-3800-vt-3210383821/" target="_blank" rel="noopener">Ozon</a>
+                  <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/689777164/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Wildberries</a>
+                  <a class="btn btn--ghost" href="assets/manuals/Manual_GALE_3800W.pdf" target="_blank" rel="noopener">Инструкция PDF</a>
+                </div>
+              </div>
 
-            <ul class="bullets">
-              <li>Фронт / мидбас / компонентка — когда важна «собранность».</li>
-              <li>Можно использовать в мост (см. инструкцию).</li>
-              <li>Компактно, понятно, без лишнего.</li>
-            </ul>
-
-            <div class="cta-row">
-              <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-2-3800-vt-3210383821/" target="_blank" rel="noopener">Купить на Ozon</a>
-              <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/689777164/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Купить на WB</a>
-            </div>
-
-            <div class="subactions">
-              <a class="link" href="assets/manuals/Manual_GALE_3800W.pdf" target="_blank" rel="noopener">Инструкция Gale (PDF)</a>
-              <a class="link" href="#comparison">Сравнить со Storm</a>
+              <ul class="usecases">
+                <li><b>Фронт</b> — отличный вариант для двухканальной системы.</li>
+                <li><b>Мост на саб</b> (4Ω) — если хочется добавить низ без сложных схем.</li>
+                <li>Подходит тем, кто хочет <b>максимум контроля</b> и понятную настройку.</li>
+              </ul>
             </div>
           </article>
-        </div>
-
-        <div class="note">
-          <strong>Важно:</strong> ссылки ведут на официальные карточки. Цены и акции на маркетплейсах меняются ежедневно — на сайте мы показываем только продукт и смысл.
-        </div>
-      </div>
-    </section>
-
-    <!-- COMPARISON -->
-    <section id="comparison" class="section section--alt">
-      <div class="container">
-        <div class="section__head">
-          <h2>Сравнение</h2>
-          <p>Быстрое решение «что брать» без лишней теории.</p>
-        </div>
-
-        <div class="compare">
-          <div class="compare__card">
-            <h3>Gale 3800W</h3>
-            <ul class="bullets">
-              <li><strong>2 канала</strong> — для фронта / мидбаса / точного контроля.</li>
-              <li><strong>Проще настроить</strong> и быстрее получить результат.</li>
-              <li><strong>Если система небольшая</strong> и важна собранность.</li>
-            </ul>
-          </div>
-          <div class="compare__card compare__card--accent">
-            <h3>Storm 5800W</h3>
-            <ul class="bullets">
-              <li><strong>4/3/2 канала</strong> — гибкость схем (в т.ч. фронт + саб).</li>
-              <li><strong>Универсальный выбор</strong> «на вырост».</li>
-              <li><strong>Если нужно больше каналов</strong> и больше вариантов сборки.</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- REVIEWS -->
-    <section id="reviews" class="section">
+    <section id="reviews" class="section section--art">
+      <div class="section__art section__art--wave" aria-hidden="true"></div>
+
       <div class="container">
         <div class="section__head">
           <h2>Отзывы покупателей</h2>
-          <p>Ниже — короткие цитаты. Полные отзывы смотрите в карточках Wildberries и Ozon.</p>
+          <p class="muted">Короткие цитаты из маркетплейсов + опыт установки. Больше — в Telegram группе.</p>
         </div>
 
-        <div class="ratings">
-          <div class="rating">
-            <div class="rating__top">
-              <span class="platform platform--ozon">Ozon</span>
-              <span class="stars">★★★★★</span>
-            </div>
-            <div class="rating__value">4.9</div>
-            <div class="rating__meta">оценка по отзывам покупателей</div>
-          </div>
-          <div class="rating">
-            <div class="rating__top">
-              <span class="platform platform--wb">Wildberries</span>
-              <span class="stars">★★★★★</span>
-            </div>
-            <div class="rating__value">4.8</div>
-            <div class="rating__meta">оценка по отзывам покупателей</div>
-          </div>
-        </div>
-
-        <div class="review-grid">
+        <div class="reviews">
           <article class="review">
-            <div class="review__top">
-              <span class="platform platform--ozon">Ozon</span>
+            <div class="review__meta">
               <span class="stars">★★★★★</span>
+              <span class="tag tag--ozon">Ozon</span>
             </div>
-            <p>«Товар, впечатляюще превосходный, лучше него я не слышал ничего.»</p>
-            <div class="review__meta">Storm 5800W</div>
+            <p>«Товар впечатляюще превосходный, лучше него я не слушал ничего»</p>
+            <div class="review__foot">Storm 5800W</div>
           </article>
 
           <article class="review">
-            <div class="review__top">
-              <span class="platform platform--ozon">Ozon</span>
+            <div class="review__meta">
               <span class="stars">★★★★★</span>
+              <span class="tag tag--ozon">Ozon</span>
             </div>
-            <p>«Пришёл в рабочем состоянии. Установил — качество хорошее.»</p>
-            <div class="review__meta">Gale 3800W</div>
+            <p>«Пришёл в рабочем состоянии! Установил — качество хорошее.»</p>
+            <div class="review__foot">Gale 3800W</div>
           </article>
 
           <article class="review">
-            <div class="review__top">
-              <span class="platform platform--ozon">Ozon</span>
+            <div class="review__meta">
               <span class="stars">★★★★★</span>
+              <span class="tag tag--ozon">Ozon</span>
             </div>
             <p>«Спасибо продавцу, всё пришло хорошо упаковано — работает отлично.»</p>
-            <div class="review__meta">Gale 3800W</div>
+            <div class="review__foot">Gale 3800W</div>
           </article>
 
           <article class="review">
-            <div class="review__top">
-              <span class="platform platform--wb">Wildberries</span>
+            <div class="review__meta">
               <span class="stars">★★★★★</span>
+              <span class="tag tag--wb">Wildberries</span>
             </div>
-            <p>«Все отлично. Минусов нет. Работает нормально.»</p>
-            <div class="review__meta">Gale / Storm</div>
+            <p>«Советую этот усилитель — по мощности понравился.»</p>
+            <div class="review__foot">Gale 3800W • WB</div>
           </article>
 
           <article class="review">
-            <div class="review__top">
-              <span class="platform platform--wb">Wildberries</span>
-              <span class="stars">★★★★★</span>
+            <div class="review__meta">
+              <span class="stars">★★★★☆</span>
+              <span class="tag tag--wb">Wildberries</span>
             </div>
-            <p>«Красивый дизайн, компактный. Классный.»</p>
-            <div class="review__meta">Gale 3800W</div>
+            <p>«Красивый дизайн, компактный! Классный, маленький — мне не хватать.»</p>
+            <div class="review__foot">Gale 3800W • WB</div>
           </article>
 
           <article class="review">
-            <div class="review__top">
-              <span class="platform platform--wb">Wildberries</span>
+            <div class="review__meta">
               <span class="stars">★★★★★</span>
+              <span class="tag tag--wb">Wildberries</span>
             </div>
-            <p>«По мощности понравился. Буду собирать систему дальше.»</p>
-            <div class="review__meta">Storm 5800W</div>
+            <p>«Всё отлично. Минусов нет. Работает нормально.»</p>
+            <div class="review__foot">Gale 3800W • WB</div>
           </article>
         </div>
 
-        <div class="cta-wide">
-          <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-4-5800-vt-3139066863/?oos_search=false&prev_collection=163371609" target="_blank" rel="noopener">Открыть Storm на Ozon</a>
-          <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/636038071/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Открыть Storm на WB</a>
-          <a class="btn btn--ozon" href="https://www.ozon.ru/product/black-tiger-audio-usilitel-avtomobilnyy-kanaly-2-3800-vt-3210383821/" target="_blank" rel="noopener">Открыть Gale на Ozon</a>
-          <a class="btn btn--wb" href="https://www.wildberries.ru/catalog/689777164/detail.aspx?targetUrl=GP" target="_blank" rel="noopener">Открыть Gale на WB</a>
+        <div class="hero__cta hero__cta--center">
+          <a class="btn btn--primary" href="#amps">Выбрать усилитель</a>
+          <a class="btn btn--ghost" href="#group">Задать вопрос в группе</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPARE -->
+    <section id="compare" class="section section--alt section--art">
+      <div class="section__art section__art--sparks" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="section__head">
+          <h2>Сравнение Storm и Gale</h2>
+          <p class="muted">Одинаковые поля — чтобы было легко выбрать. Все цифры — из инструкций.</p>
+        </div>
+
+        <div class="tablewrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Параметр</th>
+                <th>Storm 5800W</th>
+                <th>Gale 3800W</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Каналы</td><td>4/3/2</td><td>2</td></tr>
+              <tr><td>RMS @ 4Ω</td><td>60W × 4</td><td>80W × 2</td></tr>
+              <tr><td>RMS @ 2Ω</td><td>80W × 4</td><td>160W × 2</td></tr>
+              <tr><td>Bridge @ 4Ω</td><td>160W × 2</td><td>160W × 1</td></tr>
+              <tr><td>THD</td><td>&lt; 0.15%</td><td>&lt; 0.2%</td></tr>
+              <tr><td>Диапазон частот</td><td>10Hz–30kHz</td><td>20Hz–20kHz</td></tr>
+              <tr><td>S/N</td><td>&gt; 90dB</td><td>&gt; 95dB</td></tr>
+              <tr><td>Чувствительность</td><td>200mV–8V</td><td>150mV–8V</td></tr>
+              <tr><td>Предохранители</td><td>25A × 2</td><td>25A × 1</td></tr>
+              <tr><td>Гарантия</td><td>12 месяцев</td><td>12 месяцев</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout">
+          Не уверены? Напишите в группу — подберём по задаче и подскажем по подключению.
+          <a href="#group">Перейти к группе</a>
         </div>
       </div>
     </section>
@@ -280,32 +327,61 @@
       <div class="container">
         <div class="section__head">
           <h2>Инструкции и подключение</h2>
-          <p>Внутри: схема, мост, фильтры и базовые рекомендации. Если нужно — подскажем в Telegram.</p>
+          <p class="muted">
+            Скачайте PDF и используйте как «шпаргалку». В группе поможем по настройке gain/HPF/LPF.
+          </p>
         </div>
 
-        <div class="manual-grid">
+        <div class="manuals">
           <div class="manual">
-            <div class="manual__title">Инструкция GALE 3800W</div>
-            <div class="manual__meta">PDF • RU/EN</div>
-            <a class="btn btn--primary" href="assets/manuals/Manual_GALE_3800W.pdf" target="_blank" rel="noopener">Скачать PDF</a>
-          </div>
-          <div class="manual">
-            <div class="manual__title">Инструкция STORM 5800W</div>
-            <div class="manual__meta">PDF • RU/EN</div>
-            <a class="btn btn--primary" href="assets/manuals/Manual_STORM_5800W.pdf" target="_blank" rel="noopener">Скачать PDF</a>
-          </div>
-        </div>
-
-        <div class="howto">
-          <h3>Кому подойдёт</h3>
-          <div class="howto__grid">
-            <div class="howto__card">
-              <h4>Если вы хотите «просто чтобы звучало хорошо»</h4>
-              <p>Берите Gale 3800W на фронт или мидбас. Быстро настраивается, даёт «собранность» и понятный контроль.</p>
+            <div class="manual__thumb">
+              <img src="assets/manuals/thumbs/storm_thumb.png" alt="" />
             </div>
-            <div class="howto__card">
-              <h4>Если вы собираете систему и думаете на вырост</h4>
-              <p>Storm 5800W — гибкость по каналам (4/3/2) и больше вариантов сборки. Удобно, когда система растёт.</p>
+            <div class="manual__body">
+              <div class="manual__title">Инструкция Storm 5800W</div>
+              <div class="manual__meta">PDF • схема подключения • настройки</div>
+              <div class="manual__actions">
+                <a class="btn btn--primary" href="assets/manuals/Manual_STORM_5800W.pdf" target="_blank" rel="noopener">Скачать PDF</a>
+                <a class="btn btn--ghost" href="#group">Помощь по подключению</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="manual">
+            <div class="manual__thumb">
+              <img src="assets/manuals/thumbs/gale_thumb.png" alt="" />
+            </div>
+            <div class="manual__body">
+              <div class="manual__title">Инструкция Gale 3800W</div>
+              <div class="manual__meta">PDF • схема подключения • настройки</div>
+              <div class="manual__actions">
+                <a class="btn btn--primary" href="assets/manuals/Manual_GALE_3800W.pdf" target="_blank" rel="noopener">Скачать PDF</a>
+                <a class="btn btn--ghost" href="#group">Помощь по подключению</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__n">1</div>
+            <div>
+              <div class="step__t">Питание</div>
+              <div class="step__d">Кабель + правильный предохранитель рядом с АКБ. Масса — коротко и надежно.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__n">2</div>
+            <div>
+              <div class="step__t">Сигнал</div>
+              <div class="step__d">RCA без «фона», аккуратная прокладка. Фильтры HPF/LPF — по задаче.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__n">3</div>
+            <div>
+              <div class="step__t">Настройка</div>
+              <div class="step__d">Gain — не «громкость». Настроим по клиппингу/на слух, чтобы было чисто.</div>
             </div>
           </div>
         </div>
@@ -317,74 +393,78 @@
       <div class="container">
         <div class="section__head">
           <h2>FAQ</h2>
+          <p class="muted">Коротко и по делу. Если вопрос нестандартный — пишите в группу.</p>
         </div>
 
         <div class="faq">
           <details>
-            <summary>Где купить и почему нет цены на сайте?</summary>
-            <p>Мы продаём через маркетплейсы. Цены и акции меняются ежедневно (СПП, промо, скидки), поэтому на сайте оставляем только ссылки на официальные карточки.</p>
+            <summary>Как выбрать между Storm и Gale?</summary>
+            <p>
+              Если нужен <b>универсальный</b> вариант на фронт/тыл — берите Storm. Если нужен <b>двухканальный фронт</b>
+              или <b>мост на саб</b> — Gale.
+            </p>
           </details>
+
           <details>
-            <summary>Подскажете с подключением и настройкой?</summary>
-            <p>Да. Напишите в Telegram — поможем подобрать схему, подсказать по мосту и базовым настройкам фильтров. Инструкции (PDF) доступны выше.</p>
+            <summary>Почему на сайте нет цены?</summary>
+            <p>
+              Цена на маркетплейсах меняется (акции, СПП, остатки). Поэтому на сайте — только характеристики и выбор площадки.
+            </p>
           </details>
+
           <details>
-            <summary>Чем отличаются Gale и Storm в двух словах?</summary>
-            <p>Gale — 2 канала и «точный контроль» на фронт/мидбас. Storm — 4/3/2 канала и «универсальность» под разные сборки.</p>
+            <summary>Поможете с подключением?</summary>
+            <p>
+              Да. В Telegram группе — схемы, подсказки и настройка по вашему автомобилю/магнитоле/акустике.
+            </p>
+          </details>
+
+          <details>
+            <summary>Где взять инструкцию?</summary>
+            <p>
+              В разделе «Инструкции» выше — два PDF. Также можно скачать прямо с карточки усилителя.
+            </p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section section--contact">
-      <div class="container contact">
-        <div>
-          <h2>Контакты</h2>
-          <p>Если нравится подход «считать и делать» — напишите. Подскажу, что лучше под вашу систему и помогу с настройкой.</p>
+    <!-- GROUP / FOOTER -->
+    <section id="group" class="section section--alt section--group">
+      <div class="container group">
+        <h2>Поддержка и сообщество</h2>
+        <p class="muted">
+          Вопросы по подключению/настройке, реальные отзывы, схемы и советы — в нашей Telegram группе.
+        </p>
 
-          <div class="contact__actions">
-            <a class="btn btn--primary" href="https://t.me/Hardlivers" target="_blank" rel="noopener">Написать в Telegram</a>
-            <a class="btn btn--ghost" href="mailto:S@artyuhin.ru">Написать на email</a>
-          </div>
+        <div class="group__qr">
+          <img src="assets/qr/telegram_group_qr.png" alt="QR в Telegram группу BLACK TIGER AUDIO" />
         </div>
 
-        <div class="contact__card">
-          <div class="contact__brand">
-            <img src="assets/tiger-head.png" alt="" />
-            <div>
-              <div class="contact__brand-title">BLACK TIGER AUDIO</div>
-              <div class="contact__brand-sub">Усилители • честные спеки • поддержка</div>
-            </div>
-          </div>
-
-          <div class="contact__rows">
-            <div class="contact__row"><span>Telegram</span><strong>@Hardlivers</strong></div>
-            <div class="contact__row"><span>Email</span><strong>S@artyuhin.ru</strong></div>
-          </div>
+        <div class="group__actions">
+          <a class="btn btn--primary" href="https://t.me/+ofGnh1kju7hlZTk6" target="_blank" rel="noopener">Открыть Telegram группу</a>
+          <a class="btn btn--ghost" href="#amps">Вернуться к усилителям</a>
         </div>
-      </div>
-      <div class="footer">
-        <div class="container footer__inner">
-          <span>© BLACK TIGER AUDIO</span>
-          <span class="muted">Информация на странице не является публичной офертой.</span>
+
+        <div class="group__note">
+          Если камера не считывает QR — используйте кнопку выше.
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="footer__brand">BLACK TIGER AUDIO</div>
+          <div class="footer__muted">Усилители • автозвук • поддержка</div>
+        </div>
+        <div class="footer__right">
+          <a href="#group">Telegram группа</a>
+          <span class="dotsep">•</span>
+          <span class="footer__muted">© 2026</span>
+        </div>
+      </div>
+    </footer>
   </main>
-
-  <script>
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const href = a.getAttribute('href');
-        if (!href || href === '#') return;
-        const el = document.querySelector(href);
-        if (!el) return;
-        e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
-  </script>
 </body>
 </html>
