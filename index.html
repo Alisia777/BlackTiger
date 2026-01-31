@@ -21,6 +21,9 @@
 <body>
   <div class="bg">
     <div class="bg__noise"></div>
+    <div class="bg__spot bg__spot--a" aria-hidden="true"></div>
+    <div class="bg__spot bg__spot--b" aria-hidden="true"></div>
+    <div class="bg__spot bg__spot--c" aria-hidden="true"></div>
     <div class="bg__vignette"></div>
   </div>
 
@@ -34,9 +37,11 @@
 
       <nav class="nav__links" aria-label="Навигация">
         <a href="#amps">Усилители</a>
+        <a href="#scenarios">Сценарии</a>
         <a href="#compare">Сравнение</a>
         <a href="#reviews">Отзывы</a>
         <a href="#manuals">Инструкции</a>
+        <a href="#support">Поддержка</a>
         <a href="#faq">FAQ</a>
         <a href="#group">Группа</a>
       </nav>
@@ -129,8 +134,17 @@
         <div class="products">
           <!-- STORM -->
           <article class="product product--storm" id="storm">
-            <div class="product__media frame">
-              <img src="assets/products/storm_cut.png" alt="BLACK TIGER AUDIO Storm 5800W" />
+            <div class="product__media frame frame--photo"><div class="product__rating" aria-label="Рейтинги маркетплейсов">
+  <span class="rating-pill rating-pill--ozon">
+    <span class="rating-pill__dot" aria-hidden="true"></span>
+    Ozon&nbsp;4.9
+  </span>
+  <span class="rating-pill rating-pill--wb">
+    <span class="rating-pill__dot" aria-hidden="true"></span>
+    WB&nbsp;4.8
+  </span>
+</div>
+<img class="product__img" src="assets/products/storm_trim.png" alt="BLACK TIGER AUDIO Storm 5800W" />
               <div class="badge">Storm 5800W</div>
             </div>
 
@@ -168,8 +182,17 @@
 
           <!-- GALE -->
           <article class="product product--gale" id="gale">
-            <div class="product__media frame">
-              <img src="assets/products/gale_cut.png" alt="BLACK TIGER AUDIO Gale 3800W" />
+            <div class="product__media frame frame--photo"><div class="product__rating" aria-label="Рейтинги маркетплейсов">
+  <span class="rating-pill rating-pill--ozon">
+    <span class="rating-pill__dot" aria-hidden="true"></span>
+    Ozon&nbsp;4.9
+  </span>
+  <span class="rating-pill rating-pill--wb">
+    <span class="rating-pill__dot" aria-hidden="true"></span>
+    WB&nbsp;4.8
+  </span>
+</div>
+<img class="product__img" src="assets/products/gale_trim.png" alt="BLACK TIGER AUDIO Gale 3800W" />
               <div class="badge">Gale 3800W</div>
             </div>
 
@@ -208,7 +231,58 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
+    
+    <!-- SCENARIOS -->
+    <section id="scenarios" class="section section--alt section--art" style="--art:url('assets/art/soundwave.svg')">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Сценарии и подбор</h2>
+            <p class="section__subtitle">Быстро понять, какой усилитель подойдёт именно тебе — без «маркетинговых ватт».</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card card--glass">
+            <div class="card__icon">🔊</div>
+            <div class="card__title">Фронт + саб «одним усилителем»</div>
+            <div class="card__text">Нужно закрыть систему одним устройством: фронт/тыл и саб — выбирай <strong>Storm 5800W</strong> (4/3/2‑канальная схема).</div>
+          </div>
+
+          <div class="card card--glass">
+            <div class="card__icon">🚗</div>
+            <div class="card__title">Компактная установка</div>
+            <div class="card__text">Хочешь аккуратный монтаж и «чистый» апгрейд без усложнения — смотри <strong>Gale 3800W</strong> (2 канала).</div>
+          </div>
+
+          <div class="card card--glass">
+            <div class="card__icon">🎚️</div>
+            <div class="card__title">Настройка по-людски</div>
+            <div class="card__text">Подскажем фильтры, чувствительность и схему подключения под твою магнитолу/процессор и акустику.</div>
+          </div>
+
+          <div class="card card--glass">
+            <div class="card__icon">💬</div>
+            <div class="card__title">Сомневаешься — напиши</div>
+            <div class="card__text">Скинь: авто, магнитолу, динамики/саб и цель («громко», «чисто», «SQ») — поможем выбрать и настроить.</div>
+          </div>
+        </div>
+
+        <div class="callout callout--dark">
+          <div class="callout__body">
+            <div class="callout__title">Нужен быстрый совет по подбору?</div>
+            <div class="callout__text">Мы отвечаем в Telegram‑группе и помогаем довести систему до результата.</div>
+          </div>
+          <div class="callout__cta">
+            <a class="btn btn--primary" href="https://t.me/+ofGnh1kju7hlZTk6" target="_blank" rel="noopener">Написать в группу</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__art" aria-hidden="true"></div>
+    </section>
+
+<!-- REVIEWS -->
     <section id="reviews" class="section section--art">
       <div class="section__art section__art--wave" aria-hidden="true"></div>
 
@@ -388,7 +462,56 @@
       </div>
     </section>
 
-    <!-- FAQ -->
+    
+    <!-- SUPPORT -->
+    <section id="support" class="section section--art" style="--art:url('assets/art/sparks.svg')">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title">Поддержка, гарантия, спокойствие</h2>
+            <p class="section__subtitle">Не бросаем после покупки: помогаем подключить, настроить и получить «тот самый» звук.</p>
+          </div>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <div class="card__icon">🛠️</div>
+            <div class="card__title">Помощь с подключением</div>
+            <div class="card__text">Схема, питание, предохранители, настройка фильтров — под твою систему и задачи.</div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">🛡️</div>
+            <div class="card__title">Гарантия и обмен</div>
+            <div class="card__text">Если что-то пошло не так — решаем вопрос по‑человечески. Без «пиши в поддержку месяц».</div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">✅</div>
+            <div class="card__title">Честные характеристики</div>
+            <div class="card__text">Понятные спеки без магии. Для нас важнее результат в машине, чем красивые цифры на коробке.</div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon">📦</div>
+            <div class="card__title">Покупка на WB / Ozon</div>
+            <div class="card__text">Выбирай удобную площадку: ссылки на карточки — в блоках усилителей выше.</div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <div class="callout__body">
+            <div class="callout__title">Вопрос по подключению прямо сейчас?</div>
+            <div class="callout__text">Задай его в группе — мы подскажем, чтобы ты не спалил проводку и не словил «шум».</div>
+          </div>
+          <div class="callout__cta">
+            <a class="btn btn--primary" href="https://t.me/+ofGnh1kju7hlZTk6" target="_blank" rel="noopener">Перейти в Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- FAQ -->
     <section id="faq" class="section">
       <div class="container">
         <div class="section__head">
